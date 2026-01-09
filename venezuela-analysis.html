@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venezuela Oil Analysis | Secure File USA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-tertiary: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-muted: #666666;
+            --accent: #3b82f6;
+            --accent-dim: #1e40af;
+            --border: #2a2a2a;
+            --highlight: #22c55e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.5rem 2rem;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 10rem 2rem 5rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--accent-dim);
+            border-radius: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-date {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: var(--text-primary);
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--text-secondary);
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Key Stats Box */
+        .key-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        /* Callout Box */
+        .callout {
+            background: var(--bg-tertiary);
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .callout-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+        }
+
+        /* Quote */
+        blockquote {
+            border-left: 2px solid var(--text-muted);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        blockquote cite {
+            display: block;
+            font-style: normal;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 0.75rem;
+        }
+
+        /* Table */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background: var(--accent-dim);
+            color: var(--text-primary);
+            font-weight: 600;
+            text-align: left;
+            padding: 1rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.02em;
+        }
+
+        td {
+            padding: 0.875rem 1rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+
+        td:first-child {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Citations */
+        sup {
+            font-size: 0.7em;
+            color: var(--accent);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        sup a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        sup a:hover {
+            text-decoration: underline;
+        }
+
+        /* Analyst Network */
+        .analyst-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+
+        .analyst-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .analyst-org {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .analyst-details {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Footer Citations */
+        .citations {
+            margin-top: 5rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .citations h2 {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .citation-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .citation-item {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            padding-left: 2.5rem;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .citation-item::before {
+            content: attr(data-num);
+            position: absolute;
+            left: 0;
+            font-family: 'IBM Plex Mono', monospace;
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+
+            .hero {
+                padding: 8rem 1.5rem 3rem;
+            }
+
+            main {
+                padding: 0 1.5rem 4rem;
+            }
+
+            .key-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            table {
+                font-size: 0.8rem;
+            }
+
+            th, td {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">SECURE FILE USA</a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <span class="hero-label">Research Analysis</span>
+        <h1>Venezuela Oil After Maduro: The Gap Between Headlines and Reality</h1>
+        <p class="hero-subtitle">How institutional networks shape energy narratives—and what the data actually says about near-term production potential.</p>
+        <p class="hero-date">Updated January 9, 2026</p>
+    </div>
+
+    <main>
+        <div class="key-stats">
+            <div class="stat">
+                <div class="stat-value">$183B</div>
+                <div class="stat-label">Headline Investment Figure</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">$14B</div>
+                <div class="stat-label">Near-Term Recovery Cost</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">2 Years</div>
+                <div class="stat-label">Bank Timeline Estimate</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">8+ Years</div>
+                <div class="stat-label">Consultancy Timeline</div>
+            </div>
+        </div>
+
+        <section>
+            <p>Following the U.S. capture of Nicolás Maduro on January 3, 2026, a remarkably convergent narrative emerged from energy analysts: Venezuela's oil recovery will require <strong>$183 billion over 15 years</strong>, with meaningful production gains taking <strong>8+ years</strong>. But a closer examination reveals significant divergence between what research reports actually say about near-term potential and how those findings are characterized in media coverage.</p>
+            <p>This report maps the institutional ecosystem shaping this narrative and documents the gap between headline figures and actual assessments.</p>
+        </section>
+
+        <section>
+            <h2>The Analyst Network Shares Institutional DNA</h2>
+            <p>The analysts dominating Venezuela oil coverage form an interconnected network spanning three overlapping ecosystems: <strong>Council on Foreign Relations membership</strong>, <strong>National Petroleum Council advisory roles</strong>, and <strong>Atlantic Council affiliations</strong>. This is not conspiracy—it represents aligned incentive structures producing convergent views.</p>
+
+            <div class="analyst-card">
+                <div class="analyst-name">Kevin Book</div>
+                <div class="analyst-org">ClearView Energy Partners</div>
+                <p class="analyst-details">CFR member, NPC member appointed by the Secretary of Energy, CSIS nonresident senior associate. Clients include institutional investors, corporate strategists, and oil/gas companies.<sup><a href="#cite-1">[1]</a></sup></p>
+            </div>
+
+            <div class="analyst-card">
+                <div class="analyst-name">David Goldwyn</div>
+                <div class="analyst-org">Goldwyn Global Strategies</div>
+                <p class="analyst-details">Chairs Atlantic Council's Global Energy Center Advisory Group. CFR member, NPC member. The only person to have held both top U.S. government international energy positions (State and Energy). Consulting clients include Fortune 100 energy companies.<sup><a href="#cite-2">[2]</a></sup></p>
+            </div>
+
+            <div class="analyst-card">
+                <div class="analyst-name">Helima Croft</div>
+                <div class="analyst-org">RBC Capital Markets</div>
+                <p class="analyst-details">CFR Life Member, NPC member, Atlantic Council board director. Previously served as CIA senior economic analyst.</p>
+            </div>
+
+            <div class="analyst-card">
+                <div class="analyst-name">Francisco Monaldi</div>
+                <div class="analyst-org">Rice University / Baker Institute</div>
+                <p class="analyst-details">Affiliated with Columbia CGEP and Atlantic Council's Venezuela Working Group. Consulting for JPMorgan, Barclays, Rystad, Chevron, ExxonMobil, and Saudi Aramco.<sup><a href="#cite-3">[3]</a></sup></p>
+            </div>
+
+            <p>The pattern: these analysts rotate between government positions, think tank fellowships, and private consulting for the same oil companies seeking investment terms in Venezuela.</p>
+        </section>
+
+        <section>
+            <h2>Rystad's $183 Billion Figure Obscures the Near-Term Picture</h2>
+
+            <div class="callout">
+                <div class="callout-label">The Headline</div>
+                <p>Rystad Energy's January 2026 report states Venezuela needs <strong>$183 billion through 2040</strong> to restore production to 1990s levels of 3 million barrels per day.<sup><a href="#cite-4">[4]</a></sup> The total required capex breaks down into <strong>$102 billion of upstream spending</strong> and <strong>$81 billion for pipelines, upgraders, and other infrastructure</strong>.<sup><a href="#cite-5">[5]</a></sup></p>
+            </div>
+
+            <div class="callout">
+                <div class="callout-label">What the Report Actually Says</div>
+                <p>Only <strong>300,000-350,000 barrels per day can be restored within 2-3 years</strong> with limited spending.<sup><a href="#cite-6">[6]</a></sup> Production could reach <strong>1.4 million bpd within 24 months</strong> through workovers and infrastructure repair requiring approximately $14 billion in capital expenditure. The $183 billion figure represents the maximum scenario—and <strong>60% of that required investment ($44 billion) assumes oil prices above $80 per barrel</strong>, while Brent is forecast at $67/bbl for 2026.</p>
+            </div>
+
+            <blockquote>
+                "Companies would not go there if they know that the breakeven is $80 per barrel and that the prospects are for the next two, three, four years, oil prices stay between $60 and $70 per barrel."
+                <cite>— Claudio Galimberti, Chief Economist, Rystad Energy<sup><a href="#cite-7">[7]</a></sup></cite>
+            </blockquote>
+
+            <p><strong>The critical gap:</strong> Headlines emphasize the $183 billion/15-year figure while the actual near-term assessment shows modest but real potential for several hundred thousand bpd additions within months to two years.</p>
+        </section>
+
+        <section>
+            <h2>Major Bank Research Shows Faster Timelines</h2>
+
+            <p><strong>JPMorgan</strong> (Natasha Kaneva, Head of Global Commodities Strategy) projects Venezuela reaching <strong>1.3-1.4 million bpd within two years</strong> and <strong>2.5 million bpd over the next decade</strong> with new investments and institutional reforms.<sup><a href="#cite-8">[8]</a></sup> She characterized the situation as "one of the largest upside risks to the global oil supply outlook for 2026-2027 and beyond."<sup><a href="#cite-9">[9]</a></sup></p>
+
+            <p><strong>Goldman Sachs</strong> (Daan Struyven, Head of Oil Research) maintained their 2026 Venezuela production forecast at <strong>900,000 bpd flat</strong>, projecting "gradual and partial" recovery. In an upside scenario where Venezuela reaches 2 million bpd, Goldman estimates <strong>$4 per barrel downside</strong> to 2030 oil prices.<sup><a href="#cite-11">[11]</a></sup></p>
+
+            <p><strong>Kpler</strong> data shows current production at approximately <strong>795,000-800,000 bpd</strong>, with floating storage surging to <strong>29 million barrels</strong> as of January 9.<sup><a href="#cite-15">[15]</a></sup> Their projection: with sanctions lifted, production could reach <strong>1.1-1.2 million bpd by end-2026</strong>.<sup><a href="#cite-16">[16]</a></sup></p>
+
+            <h3>Production Timeline Comparison by Source</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Near-Term (6-12 Mo)</th>
+                            <th>Medium-Term (2-3 Yr)</th>
+                            <th>Long-Term (10-15 Yr)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kpler</td>
+                            <td>~1.0 million bpd</td>
+                            <td>1.1-1.2 million bpd</td>
+                            <td>1.7-1.8 million bpd</td>
+                        </tr>
+                        <tr>
+                            <td>JPMorgan</td>
+                            <td>1.2 million bpd</td>
+                            <td>1.3-1.4 million bpd</td>
+                            <td>2.5 million bpd</td>
+                        </tr>
+                        <tr>
+                            <td>Rystad</td>
+                            <td>Flat (~1.1m capacity)</td>
+                            <td>+350,000 bpd growth</td>
+                            <td>3.0 million bpd ($183bn)</td>
+                        </tr>
+                        <tr>
+                            <td>Goldman Sachs</td>
+                            <td>900,000 bpd (Flat)</td>
+                            <td>Partial Recovery</td>
+                            <td>Ambiguous</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Chevron Operates at Near-Capacity</h2>
+
+            <p>Chevron's Venezuela operations provide concrete baseline data. As of January 2026, the company produces approximately <strong>240,000 bpd</strong> at near-capacity across five joint ventures, representing <strong>23-27% of Venezuela's total output</strong>.<sup><a href="#cite-17">[17]</a></sup> The primary JVs are <strong>Petropiar</strong> (30% Chevron stake, Orinoco Belt extra-heavy crude upgrading) and <strong>Petroboscan</strong> (39.2% stake, Maracaibo Basin heavy crude).</p>
+
+            <p>In the first week of January 2026, Chevron loaded <strong>1.68 million barrels</strong>—the fastest pace in seven months and nearly five times the volume of early December.<sup><a href="#cite-18">[18]</a></sup></p>
+
+            <blockquote>
+                "We play a long game. Venezuela is blessed with a lot of geologic resource and bounty. We are committed to the people of the country and would like to be there as part of rebuilding Venezuela's economy."
+                <cite>— Mike Wirth, CEO, Chevron<sup><a href="#cite-19">[19]</a></sup></cite>
+            </blockquote>
+
+            <p>Chevron spent <strong>nearly $4 million lobbying</strong> in H1 2025 to maintain Venezuela operations and donated <strong>$2 million</strong> to Trump's 2025 inauguration.</p>
+        </section>
+
+        <section>
+            <h2>Service Company Stocks Rallied on Narrative, Not Contracts</h2>
+
+            <p>Following the January 3 capture, oilfield service stocks surged: <strong>Halliburton +7.84%</strong> (52-week high), <strong>Schlumberger +8.96%</strong> (235% above average volume), <strong>Baker Hughes +4-7%</strong>. Analyst consensus frames this as "Venezuela opportunity"—but actual contract prospects remain years away.</p>
+
+            <p>Halliburton filed an ICSID arbitration claim against Venezuela in December 2025 seeking approximately <strong>$199 million</strong> in damages. Schlumberger is owed approximately <strong>$469 million</strong> for past services.<sup><a href="#cite-20">[20]</a></sup> Neither has announced new Venezuela contracts.</p>
+
+            <blockquote>
+                "Perception may race ahead of reality. People will assume Venezuela can add oil faster than they actually can."
+                <cite>— Bob McNally, Rapidan Energy<sup><a href="#cite-22">[22]</a></sup></cite>
+            </blockquote>
+        </section>
+
+        <section>
+            <h2>Russian Response Was Strategically Muted</h2>
+
+            <p>Oleg Deripaska posted the most consequential Russian statement on Telegram January 3: "If our American 'partners' get control of the oil fields in Venezuela...they will control more than half of the world's oil reserves."</p>
+
+            <p>The Kremlin response was notably restrained. Vladimir Putin <strong>did not comment</strong> on the operation.<sup><a href="#cite-23">[23]</a></sup> The Foreign Ministry issued boilerplate condemnations but took no substantive counter-action.<sup><a href="#cite-24">[24]</a></sup></p>
+
+            <p>Venezuela still owes Russia approximately <strong>$6 billion</strong> in total, with Rosneft owed <strong>$2 billion</strong> of that amount.<sup><a href="#cite-26">[26]</a></sup> The state-to-state debt (approximately $3.2 billion) was restructured in 2017. Most analysts believe Rosneft maintains "contingent interests" that any new government would have to litigate.</p>
+        </section>
+
+        <section>
+            <h2>U.S. Control Strategy Outlined</h2>
+
+            <p>At the Goldman Sachs Energy Conference on January 7, Energy Secretary Chris Wright stated: "We're going to market the crude coming out of Venezuela, first this backed-up stored oil, and then indefinitely, going forward."<sup><a href="#cite-29">[29]</a></sup></p>
+
+            <p>The White House meeting on January 10 included CEOs from Exxon, ConocoPhillips, Shell, plus representatives from Chevron, Halliburton, Valero, Marathon, Trafigura, Eni, and Repsol.<sup><a href="#cite-31">[31]</a></sup> Trump announced companies would commit "$100 billion" to rebuild Venezuela's energy sector.</p>
+
+            <p>Treasury Secretary Bessent revealed the industry split:</p>
+
+            <blockquote>
+                "The big oil companies who move slowly, who have corporate boards, are not interested. I can tell you that the independent oil companies and individuals—wildcatters—our phone is ringing off the hook."
+                <cite>— Scott Bessent, Treasury Secretary<sup><a href="#cite-32">[32]</a></sup></cite>
+            </blockquote>
+        </section>
+
+        <section>
+            <h2>What the Data Actually Suggests</h2>
+
+            <p>The gap between headlines and reports reveals a pattern: <strong>consultancy estimates emphasize maximum-scenario investment requirements</strong> (driving cautious corporate planning), while <strong>bank research emphasizes upside risk</strong> (driving trading positions). Both are technically accurate but serve different audiences.</p>
+
+            <div class="callout">
+                <div class="callout-label">Verifiable Facts</div>
+                <p>Venezuela currently produces <strong>~800,000-900,000 bpd</strong>.<sup><a href="#cite-35">[35]</a></sup> Chevron operates at <strong>~240,000 bpd</strong> near capacity.<sup><a href="#cite-36">[36]</a></sup> Near-term additions of <strong>300,000-500,000 bpd</strong> are technically achievable within 12-24 months with modest investment.<sup><a href="#cite-37">[37]</a></sup> The $183 billion figure applies only to restoring peak 1990s production by 2040—a scenario requiring oil prices above $80/bbl that no analyst actually expects.</p>
+            </div>
+
+            <p>The institutional alignment: analysts connected to CFR, Atlantic Council, NPC, and oil company consulting relationships produce convergent conservative estimates. This represents <strong>emergent behavior from shared professional networks and aligned incentives, not coordination</strong>. The result is a narrative environment where cautious long-term timelines dominate headlines while faster near-term scenarios receive less attention.</p>
+        </section>
+
+        <section class="citations">
+            <h2>Citations</h2>
+            <div class="citation-list">
+                <div class="citation-item" data-num="[1]" id="cite-1">Center for Strategic and International Studies, Kevin Book profile, https://www.csis.org/people/kevin-book</div>
+                <div class="citation-item" data-num="[2]" id="cite-2">Atlantic Council, David L. Goldwyn profile, https://www.atlanticcouncil.org/expert/david-l-goldwyn/</div>
+                <div class="citation-item" data-num="[3]" id="cite-3">Baker Institute, Francisco J. Monaldi profile, https://www.bakerinstitute.org/expert/francisco-j-monaldi</div>
+                <div class="citation-item" data-num="[4]" id="cite-4">Energy Voice, "Venezuela needs $183bn to revive oil output, Rystad says," January 5, 2026</div>
+                <div class="citation-item" data-num="[5]" id="cite-5">Rigzone, "Could Venezuela Production Get Back to 3MM Barrels Per Day?" January 8, 2026</div>
+                <div class="citation-item" data-num="[6]" id="cite-6">American Journal of Transportation, Rystad Energy special market update, January 5, 2026</div>
+                <div class="citation-item" data-num="[7]" id="cite-7">NPR, "The world has too much oil right now. Will companies want Venezuela's?" January 7, 2026</div>
+                <div class="citation-item" data-num="[8]" id="cite-8">J.P. Morgan, "Venezuela: Impact on Oil and LNG Markets," January 2026</div>
+                <div class="citation-item" data-num="[9]" id="cite-9">J.P. Morgan Global Research, Oil Markets Weekly, January 2026</div>
+                <div class="citation-item" data-num="[10]" id="cite-10">CNBC Africa, "Venezuela's oil supply to rise in years ahead," January 5, 2026</div>
+                <div class="citation-item" data-num="[11]" id="cite-11">CNBC Africa, Goldman Sachs oil price forecasts, January 5, 2026</div>
+                <div class="citation-item" data-num="[12]" id="cite-12">Goldman Sachs, January 4 note on Venezuela</div>
+                <div class="citation-item" data-num="[13]" id="cite-13">The National, "OPEC opts for caution as US takeover of Venezuela oil adds supply risks," January 4, 2026</div>
+                <div class="citation-item" data-num="[14]" id="cite-14">CNBC, "Maduro overthrow could pave the way for US oil companies," January 5, 2026</div>
+                <div class="citation-item" data-num="[15]" id="cite-15">Bloomberg/Kpler, "Venezuelan Oil Being Held at Sea Swells After US Intervention," January 9, 2026</div>
+                <div class="citation-item" data-num="[16]" id="cite-16">Kpler, "Maduro captured: Venezuela's oil future at a crossroads," January 5, 2026</div>
+                <div class="citation-item" data-num="[17]" id="cite-17">Energy Analytics Institute, "Chevron JVs in Venezuela producing around 242,000 b/d," March 2025</div>
+                <div class="citation-item" data-num="[18]" id="cite-18">Vortexa/TT News, "Chevron oil tankers Venezuela," January 2026</div>
+                <div class="citation-item" data-num="[19]" id="cite-19">World Oil, "Chevron CEO affirms long-term presence in Venezuela," November 2025</div>
+                <div class="citation-item" data-num="[20]" id="cite-20">Yahoo Finance, "Dear SLB Stock Fans," January 2026</div>
+                <div class="citation-item" data-num="[21]" id="cite-21">World Oil, "Venezuela oil investment faces long timelines," January 6, 2026</div>
+                <div class="citation-item" data-num="[22]" id="cite-22">CNBC/CNN, Bob McNally quotes, January 3, 2026</div>
+                <div class="citation-item" data-num="[23]" id="cite-23">Atlantic Council, "The US capture of Maduro puts Russia's weakness on display," January 2026</div>
+                <div class="citation-item" data-num="[24]" id="cite-24">The Moscow Times/NPR, Russian Foreign Ministry statements, January 3-5, 2026</div>
+                <div class="citation-item" data-num="[25]" id="cite-25">CNBC, "How the ousting of Russia's ally Maduro benefits Moscow," January 5, 2026</div>
+                <div class="citation-item" data-num="[26]" id="cite-26">American Enterprise Institute, "Russia and Venezuela—Toward a New Yalta?" January 2026</div>
+                <div class="citation-item" data-num="[27]" id="cite-27">OPEC Press Release, January 4, 2026</div>
+                <div class="citation-item" data-num="[28]" id="cite-28">Bloomberg, "OPEC Sticks With Plan to Keep Oil Supply Steady," January 4, 2026</div>
+                <div class="citation-item" data-num="[29]" id="cite-29">CBS News/BNN Bloomberg, Energy Secretary Wright statements, January 7, 2026</div>
+                <div class="citation-item" data-num="[30]" id="cite-30">CNBC, "Trump Venezuela oil executives White House meeting," January 9, 2026</div>
+                <div class="citation-item" data-num="[31]" id="cite-31">CNBC/AP, White House meeting attendee list, January 10, 2026</div>
+                <div class="citation-item" data-num="[32]" id="cite-32">CNN, "Energy executives scramble to head off Trump demands," January 8, 2026</div>
+                <div class="citation-item" data-num="[33]" id="cite-33">CNBC Africa, JPMorgan projections, January 5, 2026</div>
+                <div class="citation-item" data-num="[34]" id="cite-34">The National, "Venezuelan oil output could reach 1.2 million bpd by end of 2026," January 5, 2026</div>
+                <div class="citation-item" data-num="[35]" id="cite-35">CNBC Africa, current Venezuela production figures, January 2026</div>
+                <div class="citation-item" data-num="[36]" id="cite-36">CNN, "Big Oil doesn't share Trump's dream," January 5, 2026</div>
+                <div class="citation-item" data-num="[37]" id="cite-37">CFR Expert Brief, "Increasing Venezuela's Oil Output Will Take Several Years," January 2026</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">SECURE FILE USA</div>
+            <p class="footer-text">© 2026 Secure File USA. All rights reserved. Virginia, USA.</p>
+        </div>
+    </footer>
+</body>
+</html>
