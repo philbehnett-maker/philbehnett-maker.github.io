@@ -172,6 +172,30 @@
             fill: var(--bg-primary);
         }
 
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-link {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 10px 24px;
+            background: transparent;
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            border-color: var(--accent);
+            background: var(--accent-dim);
+        }
+
         .nav-contact {
             font-family: 'Inter', sans-serif;
             font-size: 14px;
@@ -962,6 +986,15 @@
                 height: 32px;
             }
 
+            .nav-links {
+                gap: 8px;
+            }
+
+            .nav-link {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
             .nav-contact {
                 padding: 8px 14px;
                 font-size: 12px;
@@ -1133,7 +1166,10 @@
                 </div>
                 SECURE FILE USA
             </a>
-            <a href="#contact" class="nav-contact">Get in Touch</a>
+            <div class="nav-links">
+                <a href="/venezuela-analysis.html" class="nav-link">Research</a>
+                <a href="#contact" class="nav-contact">Get in Touch</a>
+            </div>
         </div>
     </nav>
 
