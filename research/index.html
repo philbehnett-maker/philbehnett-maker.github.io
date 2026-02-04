@@ -1,0 +1,409 @@
+<!DOCTYPE html><!--MfpoGUwVfonucRLMn_bs2--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/chunks/698c95527fd342d5.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/b9a0fabf54a78ef2.js"/><script src="/_next/static/chunks/f2f58a7e93290fbb.js" async=""></script><script src="/_next/static/chunks/5636b81df088f077.js" async=""></script><script src="/_next/static/chunks/turbopack-a486008a601eae06.js" async=""></script><script src="/_next/static/chunks/2f236954d6a65e12.js" async=""></script><script src="/_next/static/chunks/072ba5d17e5abffd.js" async=""></script><meta name="next-size-adjust" content=""/><title>Research | MOOSE</title><meta name="description" content="Research and analysis from FAESR.ai — exploring AI alignment, open source intelligence, and complex systems."/><meta name="author" content="Secure File USA"/><meta name="keywords" content="AI,local-first,engineering assistant,LLM,privacy,security,on-premise"/><meta property="og:title" content="Moose | Local-First AI Engineering Assistant"/><meta property="og:description" content="AI that never leaves your building. Multi-agent orchestration with complete data sovereignty."/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Moose | Local-First AI Engineering Assistant"/><meta name="twitter:description" content="AI that never leaves your building. Multi-agent orchestration with complete data sovereignty."/><link rel="icon" href="/favicon.ico?favicon.0b3bf435.ico" sizes="256x256" type="image/x-icon"/><script src="/_next/static/chunks/a6dad97d9634a72d.js" noModule=""></script></head><body class="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased"><div hidden=""><!--$--><!--/$--></div><div class="min-h-screen noise-overlay"><nav class="fixed top-0 left-0 right-0 z-50 glass-nav"><div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"><a href="/" class="flex items-center gap-3"><div class="moose-wrapper " style="width:40px;height:40px"><style>
+        .moose-wrapper {
+          position: relative;
+          cursor: pointer;
+        }
+        
+        .mf-svg {
+          width: 100%;
+          height: 100%;
+          display: block;
+          filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
+        }
+
+        /* IDLE */
+        .mf-idle .body-group {
+          animation: idle-breathe 5s ease-in-out infinite;
+        }
+        .mf-idle .wing-left {
+          animation: idle-wing-l 6s ease-in-out infinite;
+        }
+        .mf-idle .wing-right {
+          animation: idle-wing-r 6s ease-in-out infinite;
+        }
+        .mf-idle .tail-feathers {
+          animation: idle-tail 7s ease-in-out infinite;
+        }
+        
+        /* THINKING */
+        .mf-thinking .body-group {
+          animation: think-alert 2.5s ease-in-out infinite;
+        }
+        .mf-thinking .wing-left,
+        .mf-thinking .wing-right {
+          animation: think-wings 0.8s ease-in-out infinite alternate;
+        }
+        .mf-thinking .ear-left,
+        .mf-thinking .ear-right {
+          animation: think-ears 1.5s ease-in-out infinite;
+        }
+        .mf-thinking .glow-ring {
+          opacity: 1;
+          animation: glow-pulse 2s ease-in-out infinite;
+        }
+        
+        /* TALKING */
+        .mf-talking .body-group {
+          animation: talk-engage 0.6s ease-in-out infinite;
+        }
+        .mf-talking .wing-left {
+          animation: talk-wing-l 1s ease-in-out infinite;
+        }
+        .mf-talking .wing-right {
+          animation: talk-wing-r 1s ease-in-out infinite;
+        }
+        .mf-talking .beak {
+          animation: talk-beak 0.35s ease-in-out infinite;
+        }
+        
+        /* SUCCESS */
+        .mf-success .body-group {
+          animation: success-proud 0.8s cubic-bezier(0.34, 1.2, 0.64, 1) infinite;
+        }
+        .mf-success .wing-left {
+          animation: success-wing-l 0.6s ease-out forwards;
+        }
+        .mf-success .wing-right {
+          animation: success-wing-r 0.6s ease-out forwards;
+        }
+        .mf-success .crown-glow {
+          opacity: 1;
+          animation: crown-shine 1s ease-in-out infinite;
+        }
+        
+        /* ERROR */
+        .mf-error .body-group {
+          animation: error-wary 0.4s ease-in-out infinite;
+        }
+        .mf-error .wing-left,
+        .mf-error .wing-right {
+          animation: error-wings 0.5s ease-out forwards;
+        }
+        .mf-error .ear-left,
+        .mf-error .ear-right {
+          animation: error-ears 0.4s ease-out forwards;
+        }
+        
+        /* GREETING */
+        .mf-greeting .body-group {
+          animation: greet-nod 0.8s ease-in-out infinite;
+        }
+        .mf-greeting .wing-right {
+          animation: greet-wing 0.5s ease-in-out infinite alternate;
+          transform-origin: 75% 70%;
+        }
+
+        /* KEYFRAMES */
+        @keyframes idle-breathe {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-2px); }
+        }
+        
+        @keyframes idle-wing-l {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(-2deg); }
+        }
+        
+        @keyframes idle-wing-r {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(2deg); }
+        }
+        
+        @keyframes idle-tail {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(1deg); }
+        }
+        
+        @keyframes think-alert {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-3px); }
+        }
+        
+        @keyframes think-wings {
+          0% { transform: translateY(0); }
+          100% { transform: translateY(-4px); }
+        }
+        
+        @keyframes think-ears {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(3deg); }
+        }
+        
+        @keyframes glow-pulse {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.6; }
+        }
+        
+        @keyframes talk-engage {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-2px); }
+        }
+        
+        @keyframes talk-wing-l {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(-5deg); }
+        }
+        
+        @keyframes talk-wing-r {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(5deg); }
+        }
+        
+        @keyframes talk-beak {
+          0%, 100% { transform: scaleY(1); }
+          50% { transform: scaleY(0.85); }
+        }
+        
+        @keyframes success-proud {
+          0%, 100% { transform: translateY(0) scale(1); }
+          50% { transform: translateY(-6px) scale(1.01); }
+        }
+        
+        @keyframes success-wing-l {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(-18deg) translateY(-5px); }
+        }
+        
+        @keyframes success-wing-r {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(18deg) translateY(-5px); }
+        }
+        
+        @keyframes crown-shine {
+          0%, 100% { opacity: 0.5; }
+          50% { opacity: 0.9; }
+        }
+        
+        @keyframes error-wary {
+          0%, 100% { transform: translateX(0); }
+          25% { transform: translateX(-2px); }
+          75% { transform: translateX(2px); }
+        }
+        
+        @keyframes error-wings {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(5deg) translateY(3px); }
+        }
+        
+        @keyframes error-ears {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(-8deg); }
+        }
+        
+        @keyframes greet-nod {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-4px) rotate(1deg); }
+        }
+        
+        @keyframes greet-wing {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(10deg); }
+        }
+        
+        .glow-ring { opacity: 0; transition: opacity 0.3s; }
+        .crown-glow { opacity: 0; transition: opacity 0.3s; }
+      </style><svg viewBox="0 0 200 200" class="mf-svg mf-idle"><defs><linearGradient id="furDark" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#5c4a3d"></stop><stop offset="100%" stop-color="#3d3029"></stop></linearGradient><linearGradient id="furMid" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#8b7355"></stop><stop offset="50%" stop-color="#6d5a47"></stop><stop offset="100%" stop-color="#4a3d32"></stop></linearGradient><linearGradient id="furLight" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#a69076"></stop><stop offset="100%" stop-color="#8b7355"></stop></linearGradient><linearGradient id="furChest" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#d4c4a8"></stop><stop offset="100%" stop-color="#b8a88c"></stop></linearGradient><linearGradient id="antler" x1="50%" y1="100%" x2="50%" y2="0%"><stop offset="0%" stop-color="#6b5d4d"></stop><stop offset="30%" stop-color="#9c8b74"></stop><stop offset="70%" stop-color="#c4b59c"></stop><stop offset="100%" stop-color="#e0d5c3"></stop></linearGradient><linearGradient id="wingPrimary" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#2d4a3e"></stop><stop offset="40%" stop-color="#1f3830"></stop><stop offset="100%" stop-color="#162822"></stop></linearGradient><linearGradient id="wingSecondary" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#4a6b5a"></stop><stop offset="50%" stop-color="#3d5a4a"></stop><stop offset="100%" stop-color="#2d4a3e"></stop></linearGradient><linearGradient id="wingAccent" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c9a962"></stop><stop offset="50%" stop-color="#a68b4b"></stop><stop offset="100%" stop-color="#8b7340"></stop></linearGradient><radialGradient id="eyeOuter" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#4a3d28"></stop><stop offset="100%" stop-color="#2a1f14"></stop></radialGradient><radialGradient id="eyeInner" cx="30%" cy="30%" r="60%"><stop offset="0%" stop-color="#c9a962"></stop><stop offset="60%" stop-color="#8b6b2a"></stop><stop offset="100%" stop-color="#5a4420"></stop></radialGradient><linearGradient id="beak" x1="50%" y1="0%" x2="50%" y2="100%"><stop offset="0%" stop-color="#4a4038"></stop><stop offset="100%" stop-color="#2d2620"></stop></linearGradient><radialGradient id="glowGold" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c9a962" stop-opacity="0.4"></stop><stop offset="100%" stop-color="#c9a962" stop-opacity="0"></stop></radialGradient><filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><circle class="glow-ring" cx="100" cy="95" r="75" fill="url(#glowGold)"></circle><ellipse class="crown-glow" cx="100" cy="35" rx="30" ry="20" fill="url(#glowGold)"></ellipse><g class="body-group"><g class="tail-feathers" style="transform-origin:100px 160px"><path d="M 85 155 Q 70 170 65 185 Q 80 175 90 165 Z" fill="url(#wingPrimary)"></path><path d="M 95 158 Q 90 175 88 192 Q 98 178 100 165 Z" fill="url(#wingSecondary)"></path><path d="M 105 158 Q 110 175 112 192 Q 102 178 100 165 Z" fill="url(#wingSecondary)"></path><path d="M 115 155 Q 130 170 135 185 Q 120 175 110 165 Z" fill="url(#wingPrimary)"></path></g><g class="wing-left" style="transform-origin:65px 100px"><path d="M 62 90 Q 30 75 15 55 Q 18 70 22 82 Q 8 72 5 85 Q 15 95 25 98 Q 10 100 12 115 Q 25 112 35 108 Q 22 120 30 130 Q 42 122 52 115 Q 45 130 55 138 L 62 115 Z" fill="url(#wingPrimary)"></path><path d="M 60 95 Q 40 85 30 75 Q 35 88 40 95 Q 28 92 25 102 Q 38 102 48 100 Q 38 110 45 118 L 58 108 Z" fill="url(#wingSecondary)"></path><path d="M 55 92 Q 38 88 28 82" stroke="url(#wingAccent)" stroke-width="3" fill="none" stroke-linecap="round"></path><path d="M 52 102 Q 35 100 25 98" stroke="url(#wingAccent)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"></path></g><g class="wing-right" style="transform-origin:135px 100px"><path d="M 138 90 Q 170 75 185 55 Q 182 70 178 82 Q 192 72 195 85 Q 185 95 175 98 Q 190 100 188 115 Q 175 112 165 108 Q 178 120 170 130 Q 158 122 148 115 Q 155 130 145 138 L 138 115 Z" fill="url(#wingPrimary)"></path><path d="M 140 95 Q 160 85 170 75 Q 165 88 160 95 Q 172 92 175 102 Q 162 102 152 100 Q 162 110 155 118 L 142 108 Z" fill="url(#wingSecondary)"></path><path d="M 145 92 Q 162 88 172 82" stroke="url(#wingAccent)" stroke-width="3" fill="none" stroke-linecap="round"></path><path d="M 148 102 Q 165 100 175 98" stroke="url(#wingAccent)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"></path></g><ellipse cx="100" cy="120" rx="40" ry="42" fill="url(#furMid)"></ellipse><ellipse cx="100" cy="130" rx="25" ry="28" fill="url(#furChest)"></ellipse><ellipse cx="100" cy="138" rx="18" ry="18" fill="url(#furLight)" opacity="0.5"></ellipse><path d="M 88 118 Q 92 128 88 140" stroke="#c4b49a" stroke-width="1" fill="none" opacity="0.4"></path><path d="M 100 115 Q 100 130 100 145" stroke="#c4b49a" stroke-width="1" fill="none" opacity="0.4"></path><path d="M 112 118 Q 108 128 112 140" stroke="#c4b49a" stroke-width="1" fill="none" opacity="0.4"></path><ellipse cx="100" cy="85" rx="28" ry="22" fill="url(#furMid)"></ellipse><ellipse cx="100" cy="62" rx="30" ry="28" fill="url(#furLight)"></ellipse><path d="M 75 55 Q 85 50 100 48 Q 115 50 125 55 Q 120 62 100 65 Q 80 62 75 55 Z" fill="url(#furMid)" opacity="0.6"></path><g class="ear-left" style="transform-origin:72px 42px"><path d="M 72 48 Q 60 35 55 25 Q 52 35 58 45 Q 65 50 72 48 Z" fill="url(#furMid)"></path><path d="M 68 45 Q 62 38 60 32" stroke="#d4c4a8" stroke-width="2" fill="none" opacity="0.5"></path></g><g class="ear-right" style="transform-origin:128px 42px"><path d="M 128 48 Q 140 35 145 25 Q 148 35 142 45 Q 135 50 128 48 Z" fill="url(#furMid)"></path><path d="M 132 45 Q 138 38 140 32" stroke="#d4c4a8" stroke-width="2" fill="none" opacity="0.5"></path></g><g filter="url(#softGlow)"><path d="M 78 45 Q 72 30 65 15 M 72 30 Q 60 28 52 22 M 72 30 Q 65 22 58 18 M 68 38 Q 55 38 45 35 M 68 38 Q 58 32 50 28" fill="none" stroke="url(#antler)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="65" cy="15" r="2.5" fill="#e0d5c3"></circle><circle cx="52" cy="22" r="2" fill="#e0d5c3"></circle><circle cx="58" cy="18" r="2" fill="#e0d5c3"></circle><circle cx="45" cy="35" r="2" fill="#e0d5c3"></circle><circle cx="50" cy="28" r="2" fill="#e0d5c3"></circle><path d="M 122 45 Q 128 30 135 15 M 128 30 Q 140 28 148 22 M 128 30 Q 135 22 142 18 M 132 38 Q 145 38 155 35 M 132 38 Q 142 32 150 28" fill="none" stroke="url(#antler)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="135" cy="15" r="2.5" fill="#e0d5c3"></circle><circle cx="148" cy="22" r="2" fill="#e0d5c3"></circle><circle cx="142" cy="18" r="2" fill="#e0d5c3"></circle><circle cx="155" cy="35" r="2" fill="#e0d5c3"></circle><circle cx="150" cy="28" r="2" fill="#e0d5c3"></circle></g><g class="eyes"><ellipse cx="85" cy="60" rx="8" ry="9" fill="url(#eyeOuter)"></ellipse><ellipse cx="85" cy="60" rx="5" ry="6" fill="url(#eyeInner)"></ellipse><ellipse cx="85" cy="60" rx="2.5" ry="3" fill="#1a1408"></ellipse><circle cx="83" cy="58" r="1.5" fill="#fff" opacity="0.8"></circle><ellipse cx="115" cy="60" rx="8" ry="9" fill="url(#eyeOuter)"></ellipse><ellipse cx="115" cy="60" rx="5" ry="6" fill="url(#eyeInner)"></ellipse><ellipse cx="115" cy="60" rx="2.5" ry="3" fill="#1a1408"></ellipse><circle cx="113" cy="58" r="1.5" fill="#fff" opacity="0.8"></circle></g><path d="M 78 52 Q 85 50 92 52" stroke="#4a3d32" stroke-width="1.5" fill="none" opacity="0.5"></path><path d="M 108 52 Q 115 50 122 52" stroke="#4a3d32" stroke-width="1.5" fill="none" opacity="0.5"></path><g class="beak" style="transform-origin:100px 72px"><path d="M 95 68 Q 100 65 105 68 L 103 75 Q 100 78 97 75 Z" fill="url(#beak)"></path><ellipse cx="100" cy="70" rx="3" ry="2" fill="#1a1408" opacity="0.8"></ellipse><ellipse cx="98" cy="68" rx="1.5" ry="1" fill="#5a4a3a" opacity="0.5"></ellipse></g><path d="M 94 77 Q 100 80 106 77" stroke="#4a3d32" stroke-width="1" fill="none" opacity="0.4"></path><ellipse cx="85" cy="162" rx="8" ry="4" fill="#3d3029"></ellipse><ellipse cx="115" cy="162" rx="8" ry="4" fill="#3d3029"></ellipse></g></svg></div><span class="text-xl font-semibold text-cream">Moose</span></a><div class="hidden md:flex items-center gap-8"><a href="/#features" class="text-foreground-muted hover:text-gold transition-colors duration-300">Features</a><a href="/#agents" class="text-foreground-muted hover:text-gold transition-colors duration-300">Agents</a><a href="/#install" class="text-foreground-muted hover:text-gold transition-colors duration-300">Install</a><a href="/#about" class="text-foreground-muted hover:text-gold transition-colors duration-300">About</a><a href="//research" class="hover:text-gold transition-colors duration-300 nav-link-active">Research</a><a href="https://github.com/moosefinch/moose" target="_blank" rel="noopener noreferrer" class="btn-outline flex items-center gap-2 px-4 py-2 text-cream rounded-lg"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>GitHub</a></div></div></nav><section class="pt-32 pb-20 relative hero-bg"><div class="max-w-7xl mx-auto px-6 text-center"><h1 class="text-5xl md:text-6xl font-bold mb-6 gradient-text tracking-tight">Research</h1><p class="text-lg md:text-xl text-foreground-muted max-w-2xl mx-auto leading-relaxed">Analysis and research from<!-- --> <a href="https://faesr.ai" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-cream transition-colors">FAESR.ai</a> <!-- -->— exploring AI alignment, open source intelligence, and complex systems.</p></div></section><section class="py-20"><div class="max-w-4xl mx-auto px-6"><div class="space-y-6"><a href="/research/chemical-layer" class="block research-card"><div class="glass-card p-8 rounded-2xl"><div class="flex flex-col gap-4"><div class="flex flex-wrap items-center gap-3"><span class="research-tag">AI Alignment</span><span class="research-tag">Neuroscience</span><span class="research-tag">AOI</span><span class="text-foreground-muted text-sm ml-auto">February 2026</span></div><h2 class="text-2xl font-bold text-cream">The Chemical Layer: Why AI Alignment Requires Biology</h2><p class="text-foreground-muted leading-relaxed">The difference between optimization and motivation isn&#x27;t computational power — it&#x27;s felt stakes. Evolution already solved alignment. It solved it chemically.</p><div class="flex items-center gap-2 text-gold text-sm font-medium"><span>Read article</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></div></div></div></a><a href="/venezuela-analysis.html" class="block research-card"><div class="glass-card p-8 rounded-2xl"><div class="flex flex-col gap-4"><div class="flex flex-wrap items-center gap-3"><span class="research-tag">OSINT</span><span class="research-tag">Geopolitics</span><span class="research-tag">Analysis</span><span class="text-foreground-muted text-sm ml-auto">2025</span></div><h2 class="text-2xl font-bold text-cream">Venezuela OSINT Analysis</h2><p class="text-foreground-muted leading-relaxed">Open source intelligence analysis examining Venezuela&#x27;s political and economic landscape through publicly available data.</p><div class="flex items-center gap-2 text-gold text-sm font-medium"><span>Read article</span><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></div></div></div></a></div></div></section><footer class="py-14 relative footer-gradient"><div class="section-divider absolute top-0 left-0 right-0"></div><div class="max-w-7xl mx-auto px-6"><div class="flex flex-col md:flex-row items-center justify-between gap-6"><a href="/" class="flex items-center gap-3"><div class="moose-wrapper " style="width:36px;height:36px"><style>
+        .moose-wrapper {
+          position: relative;
+          cursor: pointer;
+        }
+        
+        .mf-svg {
+          width: 100%;
+          height: 100%;
+          display: block;
+          filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
+        }
+
+        /* IDLE */
+        .mf-idle .body-group {
+          animation: idle-breathe 5s ease-in-out infinite;
+        }
+        .mf-idle .wing-left {
+          animation: idle-wing-l 6s ease-in-out infinite;
+        }
+        .mf-idle .wing-right {
+          animation: idle-wing-r 6s ease-in-out infinite;
+        }
+        .mf-idle .tail-feathers {
+          animation: idle-tail 7s ease-in-out infinite;
+        }
+        
+        /* THINKING */
+        .mf-thinking .body-group {
+          animation: think-alert 2.5s ease-in-out infinite;
+        }
+        .mf-thinking .wing-left,
+        .mf-thinking .wing-right {
+          animation: think-wings 0.8s ease-in-out infinite alternate;
+        }
+        .mf-thinking .ear-left,
+        .mf-thinking .ear-right {
+          animation: think-ears 1.5s ease-in-out infinite;
+        }
+        .mf-thinking .glow-ring {
+          opacity: 1;
+          animation: glow-pulse 2s ease-in-out infinite;
+        }
+        
+        /* TALKING */
+        .mf-talking .body-group {
+          animation: talk-engage 0.6s ease-in-out infinite;
+        }
+        .mf-talking .wing-left {
+          animation: talk-wing-l 1s ease-in-out infinite;
+        }
+        .mf-talking .wing-right {
+          animation: talk-wing-r 1s ease-in-out infinite;
+        }
+        .mf-talking .beak {
+          animation: talk-beak 0.35s ease-in-out infinite;
+        }
+        
+        /* SUCCESS */
+        .mf-success .body-group {
+          animation: success-proud 0.8s cubic-bezier(0.34, 1.2, 0.64, 1) infinite;
+        }
+        .mf-success .wing-left {
+          animation: success-wing-l 0.6s ease-out forwards;
+        }
+        .mf-success .wing-right {
+          animation: success-wing-r 0.6s ease-out forwards;
+        }
+        .mf-success .crown-glow {
+          opacity: 1;
+          animation: crown-shine 1s ease-in-out infinite;
+        }
+        
+        /* ERROR */
+        .mf-error .body-group {
+          animation: error-wary 0.4s ease-in-out infinite;
+        }
+        .mf-error .wing-left,
+        .mf-error .wing-right {
+          animation: error-wings 0.5s ease-out forwards;
+        }
+        .mf-error .ear-left,
+        .mf-error .ear-right {
+          animation: error-ears 0.4s ease-out forwards;
+        }
+        
+        /* GREETING */
+        .mf-greeting .body-group {
+          animation: greet-nod 0.8s ease-in-out infinite;
+        }
+        .mf-greeting .wing-right {
+          animation: greet-wing 0.5s ease-in-out infinite alternate;
+          transform-origin: 75% 70%;
+        }
+
+        /* KEYFRAMES */
+        @keyframes idle-breathe {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-2px); }
+        }
+        
+        @keyframes idle-wing-l {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(-2deg); }
+        }
+        
+        @keyframes idle-wing-r {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(2deg); }
+        }
+        
+        @keyframes idle-tail {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(1deg); }
+        }
+        
+        @keyframes think-alert {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-3px); }
+        }
+        
+        @keyframes think-wings {
+          0% { transform: translateY(0); }
+          100% { transform: translateY(-4px); }
+        }
+        
+        @keyframes think-ears {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(3deg); }
+        }
+        
+        @keyframes glow-pulse {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.6; }
+        }
+        
+        @keyframes talk-engage {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-2px); }
+        }
+        
+        @keyframes talk-wing-l {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(-5deg); }
+        }
+        
+        @keyframes talk-wing-r {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(5deg); }
+        }
+        
+        @keyframes talk-beak {
+          0%, 100% { transform: scaleY(1); }
+          50% { transform: scaleY(0.85); }
+        }
+        
+        @keyframes success-proud {
+          0%, 100% { transform: translateY(0) scale(1); }
+          50% { transform: translateY(-6px) scale(1.01); }
+        }
+        
+        @keyframes success-wing-l {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(-18deg) translateY(-5px); }
+        }
+        
+        @keyframes success-wing-r {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(18deg) translateY(-5px); }
+        }
+        
+        @keyframes crown-shine {
+          0%, 100% { opacity: 0.5; }
+          50% { opacity: 0.9; }
+        }
+        
+        @keyframes error-wary {
+          0%, 100% { transform: translateX(0); }
+          25% { transform: translateX(-2px); }
+          75% { transform: translateX(2px); }
+        }
+        
+        @keyframes error-wings {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(5deg) translateY(3px); }
+        }
+        
+        @keyframes error-ears {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(-8deg); }
+        }
+        
+        @keyframes greet-nod {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-4px) rotate(1deg); }
+        }
+        
+        @keyframes greet-wing {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(10deg); }
+        }
+        
+        .glow-ring { opacity: 0; transition: opacity 0.3s; }
+        .crown-glow { opacity: 0; transition: opacity 0.3s; }
+      </style><svg viewBox="0 0 200 200" class="mf-svg mf-idle"><defs><linearGradient id="furDark" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#5c4a3d"></stop><stop offset="100%" stop-color="#3d3029"></stop></linearGradient><linearGradient id="furMid" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#8b7355"></stop><stop offset="50%" stop-color="#6d5a47"></stop><stop offset="100%" stop-color="#4a3d32"></stop></linearGradient><linearGradient id="furLight" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#a69076"></stop><stop offset="100%" stop-color="#8b7355"></stop></linearGradient><linearGradient id="furChest" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#d4c4a8"></stop><stop offset="100%" stop-color="#b8a88c"></stop></linearGradient><linearGradient id="antler" x1="50%" y1="100%" x2="50%" y2="0%"><stop offset="0%" stop-color="#6b5d4d"></stop><stop offset="30%" stop-color="#9c8b74"></stop><stop offset="70%" stop-color="#c4b59c"></stop><stop offset="100%" stop-color="#e0d5c3"></stop></linearGradient><linearGradient id="wingPrimary" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#2d4a3e"></stop><stop offset="40%" stop-color="#1f3830"></stop><stop offset="100%" stop-color="#162822"></stop></linearGradient><linearGradient id="wingSecondary" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#4a6b5a"></stop><stop offset="50%" stop-color="#3d5a4a"></stop><stop offset="100%" stop-color="#2d4a3e"></stop></linearGradient><linearGradient id="wingAccent" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c9a962"></stop><stop offset="50%" stop-color="#a68b4b"></stop><stop offset="100%" stop-color="#8b7340"></stop></linearGradient><radialGradient id="eyeOuter" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#4a3d28"></stop><stop offset="100%" stop-color="#2a1f14"></stop></radialGradient><radialGradient id="eyeInner" cx="30%" cy="30%" r="60%"><stop offset="0%" stop-color="#c9a962"></stop><stop offset="60%" stop-color="#8b6b2a"></stop><stop offset="100%" stop-color="#5a4420"></stop></radialGradient><linearGradient id="beak" x1="50%" y1="0%" x2="50%" y2="100%"><stop offset="0%" stop-color="#4a4038"></stop><stop offset="100%" stop-color="#2d2620"></stop></linearGradient><radialGradient id="glowGold" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c9a962" stop-opacity="0.4"></stop><stop offset="100%" stop-color="#c9a962" stop-opacity="0"></stop></radialGradient><filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><circle class="glow-ring" cx="100" cy="95" r="75" fill="url(#glowGold)"></circle><ellipse class="crown-glow" cx="100" cy="35" rx="30" ry="20" fill="url(#glowGold)"></ellipse><g class="body-group"><g class="tail-feathers" style="transform-origin:100px 160px"><path d="M 85 155 Q 70 170 65 185 Q 80 175 90 165 Z" fill="url(#wingPrimary)"></path><path d="M 95 158 Q 90 175 88 192 Q 98 178 100 165 Z" fill="url(#wingSecondary)"></path><path d="M 105 158 Q 110 175 112 192 Q 102 178 100 165 Z" fill="url(#wingSecondary)"></path><path d="M 115 155 Q 130 170 135 185 Q 120 175 110 165 Z" fill="url(#wingPrimary)"></path></g><g class="wing-left" style="transform-origin:65px 100px"><path d="M 62 90 Q 30 75 15 55 Q 18 70 22 82 Q 8 72 5 85 Q 15 95 25 98 Q 10 100 12 115 Q 25 112 35 108 Q 22 120 30 130 Q 42 122 52 115 Q 45 130 55 138 L 62 115 Z" fill="url(#wingPrimary)"></path><path d="M 60 95 Q 40 85 30 75 Q 35 88 40 95 Q 28 92 25 102 Q 38 102 48 100 Q 38 110 45 118 L 58 108 Z" fill="url(#wingSecondary)"></path><path d="M 55 92 Q 38 88 28 82" stroke="url(#wingAccent)" stroke-width="3" fill="none" stroke-linecap="round"></path><path d="M 52 102 Q 35 100 25 98" stroke="url(#wingAccent)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"></path></g><g class="wing-right" style="transform-origin:135px 100px"><path d="M 138 90 Q 170 75 185 55 Q 182 70 178 82 Q 192 72 195 85 Q 185 95 175 98 Q 190 100 188 115 Q 175 112 165 108 Q 178 120 170 130 Q 158 122 148 115 Q 155 130 145 138 L 138 115 Z" fill="url(#wingPrimary)"></path><path d="M 140 95 Q 160 85 170 75 Q 165 88 160 95 Q 172 92 175 102 Q 162 102 152 100 Q 162 110 155 118 L 142 108 Z" fill="url(#wingSecondary)"></path><path d="M 145 92 Q 162 88 172 82" stroke="url(#wingAccent)" stroke-width="3" fill="none" stroke-linecap="round"></path><path d="M 148 102 Q 165 100 175 98" stroke="url(#wingAccent)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"></path></g><ellipse cx="100" cy="120" rx="40" ry="42" fill="url(#furMid)"></ellipse><ellipse cx="100" cy="130" rx="25" ry="28" fill="url(#furChest)"></ellipse><ellipse cx="100" cy="138" rx="18" ry="18" fill="url(#furLight)" opacity="0.5"></ellipse><path d="M 88 118 Q 92 128 88 140" stroke="#c4b49a" stroke-width="1" fill="none" opacity="0.4"></path><path d="M 100 115 Q 100 130 100 145" stroke="#c4b49a" stroke-width="1" fill="none" opacity="0.4"></path><path d="M 112 118 Q 108 128 112 140" stroke="#c4b49a" stroke-width="1" fill="none" opacity="0.4"></path><ellipse cx="100" cy="85" rx="28" ry="22" fill="url(#furMid)"></ellipse><ellipse cx="100" cy="62" rx="30" ry="28" fill="url(#furLight)"></ellipse><path d="M 75 55 Q 85 50 100 48 Q 115 50 125 55 Q 120 62 100 65 Q 80 62 75 55 Z" fill="url(#furMid)" opacity="0.6"></path><g class="ear-left" style="transform-origin:72px 42px"><path d="M 72 48 Q 60 35 55 25 Q 52 35 58 45 Q 65 50 72 48 Z" fill="url(#furMid)"></path><path d="M 68 45 Q 62 38 60 32" stroke="#d4c4a8" stroke-width="2" fill="none" opacity="0.5"></path></g><g class="ear-right" style="transform-origin:128px 42px"><path d="M 128 48 Q 140 35 145 25 Q 148 35 142 45 Q 135 50 128 48 Z" fill="url(#furMid)"></path><path d="M 132 45 Q 138 38 140 32" stroke="#d4c4a8" stroke-width="2" fill="none" opacity="0.5"></path></g><g filter="url(#softGlow)"><path d="M 78 45 Q 72 30 65 15 M 72 30 Q 60 28 52 22 M 72 30 Q 65 22 58 18 M 68 38 Q 55 38 45 35 M 68 38 Q 58 32 50 28" fill="none" stroke="url(#antler)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="65" cy="15" r="2.5" fill="#e0d5c3"></circle><circle cx="52" cy="22" r="2" fill="#e0d5c3"></circle><circle cx="58" cy="18" r="2" fill="#e0d5c3"></circle><circle cx="45" cy="35" r="2" fill="#e0d5c3"></circle><circle cx="50" cy="28" r="2" fill="#e0d5c3"></circle><path d="M 122 45 Q 128 30 135 15 M 128 30 Q 140 28 148 22 M 128 30 Q 135 22 142 18 M 132 38 Q 145 38 155 35 M 132 38 Q 142 32 150 28" fill="none" stroke="url(#antler)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="135" cy="15" r="2.5" fill="#e0d5c3"></circle><circle cx="148" cy="22" r="2" fill="#e0d5c3"></circle><circle cx="142" cy="18" r="2" fill="#e0d5c3"></circle><circle cx="155" cy="35" r="2" fill="#e0d5c3"></circle><circle cx="150" cy="28" r="2" fill="#e0d5c3"></circle></g><g class="eyes"><ellipse cx="85" cy="60" rx="8" ry="9" fill="url(#eyeOuter)"></ellipse><ellipse cx="85" cy="60" rx="5" ry="6" fill="url(#eyeInner)"></ellipse><ellipse cx="85" cy="60" rx="2.5" ry="3" fill="#1a1408"></ellipse><circle cx="83" cy="58" r="1.5" fill="#fff" opacity="0.8"></circle><ellipse cx="115" cy="60" rx="8" ry="9" fill="url(#eyeOuter)"></ellipse><ellipse cx="115" cy="60" rx="5" ry="6" fill="url(#eyeInner)"></ellipse><ellipse cx="115" cy="60" rx="2.5" ry="3" fill="#1a1408"></ellipse><circle cx="113" cy="58" r="1.5" fill="#fff" opacity="0.8"></circle></g><path d="M 78 52 Q 85 50 92 52" stroke="#4a3d32" stroke-width="1.5" fill="none" opacity="0.5"></path><path d="M 108 52 Q 115 50 122 52" stroke="#4a3d32" stroke-width="1.5" fill="none" opacity="0.5"></path><g class="beak" style="transform-origin:100px 72px"><path d="M 95 68 Q 100 65 105 68 L 103 75 Q 100 78 97 75 Z" fill="url(#beak)"></path><ellipse cx="100" cy="70" rx="3" ry="2" fill="#1a1408" opacity="0.8"></ellipse><ellipse cx="98" cy="68" rx="1.5" ry="1" fill="#5a4a3a" opacity="0.5"></ellipse></g><path d="M 94 77 Q 100 80 106 77" stroke="#4a3d32" stroke-width="1" fill="none" opacity="0.4"></path><ellipse cx="85" cy="162" rx="8" ry="4" fill="#3d3029"></ellipse><ellipse cx="115" cy="162" rx="8" ry="4" fill="#3d3029"></ellipse></g></svg></div><span class="text-cream font-semibold text-lg">Moose</span></a><p class="text-foreground-muted text-sm">Apache 2.0 License. Built in Virginia&#x27;s Shenandoah Valley.</p><div class="flex items-center gap-6"><a href="https://github.com/moosefinch/moose" target="_blank" rel="noopener noreferrer" class="text-foreground-muted hover:text-gold transition-colors duration-300"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg></a><a href="mailto:contact@securefileusa.com" class="text-foreground-muted hover:text-gold transition-colors duration-300"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></a></div></div></div></footer></div><!--$--><!--/$--><script src="/_next/static/chunks/b9a0fabf54a78ef2.js" id="_R_" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[39756,[\"/_next/static/chunks/2f236954d6a65e12.js\"],\"default\"]\n3:I[37457,[\"/_next/static/chunks/2f236954d6a65e12.js\"],\"default\"]\n4:I[88589,[\"/_next/static/chunks/072ba5d17e5abffd.js\"],\"default\"]\na:I[68027,[],\"default\"]\n:HL[\"/_next/static/chunks/698c95527fd342d5.css\",\"style\"]\n:HL[\"/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"MfpoGUwVfonucRLMn_bs2\",\"c\":[\"\",\"research\",\"\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"research\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],[[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/698c95527fd342d5.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"div\",null,{\"className\":\"min-h-screen noise-overlay\",\"children\":[[\"$\",\"$L4\",null,{\"activePage\":\"research\",\"isSubPage\":true}],[\"$\",\"section\",null,{\"className\":\"pt-32 pb-20 relative hero-bg\",\"children\":[\"$\",\"div\",null,{\"className\":\"max-w-7xl mx-auto px-6 text-center\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"text-5xl md:text-6xl font-bold mb-6 gradient-text tracking-tight\",\"children\":\"Research\"}],[\"$\",\"p\",null,{\"className\":\"text-lg md:text-xl text-foreground-muted max-w-2xl mx-auto leading-relaxed\",\"children\":[\"Analysis and research from\",\" \",[\"$\",\"a\",null,{\"href\":\"https://faesr.ai\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"className\":\"text-gold hover:text-cream transition-colors\",\"children\":\"FAESR.ai\"}],\" \",\"— exploring AI alignment, open source intelligence, and complex systems.\"]}]]}]}],[\"$\",\"section\",null,{\"className\":\"py-20\",\"children\":[\"$\",\"div\",null,{\"className\":\"max-w-4xl mx-auto px-6\",\"children\":[\"$\",\"div\",null,{\"className\":\"space-y-6\",\"children\":[[\"$\",\"a\",\"0\",{\"href\":\"/research/chemical-layer\",\"className\":\"block research-card\",\"children\":[\"$\",\"div\",null,{\"className\":\"glass-card p-8 rounded-2xl\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex flex-col gap-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex flex-wrap items-center gap-3\",\"children\":[[[\"$\",\"span\",\"0\",{\"className\":\"research-tag\",\"children\":\"AI Alignment\"}],[\"$\",\"span\",\"1\",{\"className\":\"research-tag\",\"children\":\"Neuroscience\"}],[\"$\",\"span\",\"2\",{\"className\":\"research-tag\",\"children\":\"AOI\"}]],[\"$\",\"span\",null,{\"className\":\"text-foreground-muted text-sm ml-auto\",\"children\":\"February 2026\"}]]}],[\"$\",\"h2\",null,{\"className\":\"text-2xl font-bold text-cream\",\"children\":\"The Chemical Layer: Why AI Alignment Requires Biology\"}],[\"$\",\"p\",null,{\"className\":\"text-foreground-muted leading-relaxed\",\"children\":\"The difference between optimization and motivation isn't computational power — it's felt stakes. Evolution already solved alignment. It solved it chemically.\"}],[\"$\",\"div\",null,{\"className\":\"flex items-center gap-2 text-gold text-sm font-medium\",\"children\":[[\"$\",\"span\",null,{\"children\":\"Read article\"}],[\"$\",\"svg\",null,{\"className\":\"w-4 h-4\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"viewBox\":\"0 0 24 24\",\"children\":[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"strokeWidth\":2,\"d\":\"M17 8l4 4m0 0l-4 4m4-4H3\"}]}]]}]]}]}]}],\"$L5\"]}]}]}],\"$L6\"]}],[\"$L7\"],\"$L8\"]}],{},null,false,false]},null,false,false]},null,false,false],\"$L9\",false]],\"m\":\"$undefined\",\"G\":[\"$a\",[]],\"S\":true}\n"])</script><script>self.__next_f.push([1,"b:I[13642,[\"/_next/static/chunks/072ba5d17e5abffd.js\"],\"default\"]\nc:I[97367,[\"/_next/static/chunks/2f236954d6a65e12.js\"],\"OutletBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[97367,[\"/_next/static/chunks/2f236954d6a65e12.js\"],\"ViewportBoundary\"]\n11:I[97367,[\"/_next/static/chunks/2f236954d6a65e12.js\"],\"MetadataBoundary\"]\n5:[\"$\",\"a\",\"1\",{\"href\":\"/venezuela-analysis.html\",\"className\":\"block research-card\",\"children\":[\"$\",\"div\",null,{\"className\":\"glass-card p-8 rounded-2xl\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex flex-col gap-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex flex-wrap items-center gap-3\",\"children\":[[[\"$\",\"span\",\"0\",{\"className\":\"research-tag\",\"children\":\"OSINT\"}],[\"$\",\"span\",\"1\",{\"className\":\"research-tag\",\"children\":\"Geopolitics\"}],[\"$\",\"span\",\"2\",{\"className\":\"research-tag\",\"children\":\"Analysis\"}]],[\"$\",\"span\",null,{\"className\":\"text-foreground-muted text-sm ml-auto\",\"children\":\"2025\"}]]}],[\"$\",\"h2\",null,{\"className\":\"text-2xl font-bold text-cream\",\"children\":\"Venezuela OSINT Analysis\"}],[\"$\",\"p\",null,{\"className\":\"text-foreground-muted leading-relaxed\",\"children\":\"Open source intelligence analysis examining Venezuela's political and economic landscape through publicly available data.\"}],[\"$\",\"div\",null,{\"className\":\"flex items-center gap-2 text-gold text-sm font-medium\",\"children\":[[\"$\",\"span\",null,{\"children\":\"Read article\"}],[\"$\",\"svg\",null,{\"className\":\"w-4 h-4\",\"fill\":\"none\",\"stroke\":\"currentColor\",\"viewBox\":\"0 0 24 24\",\"children\":[\"$\",\"path\",null,{\"strokeLinecap\":\"round\",\"strokeLinejoin\":\"round\",\"strokeWidth\":2,\"d\":\"M17 8l4 4m0 0l-4 4m4-4H3\"}]}]]}]]}]}]}]\n6:[\"$\",\"$Lb\",null,{}]\n7:[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/072ba5d17e5abffd.js\",\"async\":true,\"nonce\":\"$undefined\"}]\n8:[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"$d\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@e\"}]}]\n9:[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$Lf\",null,{\"children\":\"$L10\"}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$L11\",null,{\"children\":[\"$\",\"$d\",null,{\"name\":\"Next.Metadata\",\"children\":\"$L12\"}]}]}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}]\n"])</script><script>self.__next_f.push([1,"10:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n"])</script><script>self.__next_f.push([1,"13:I[27201,[\"/_next/static/chunks/2f236954d6a65e12.js\"],\"IconMark\"]\ne:null\n12:[[\"$\",\"title\",\"0\",{\"children\":\"Research | MOOSE\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Research and analysis from FAESR.ai — exploring AI alignment, open source intelligence, and complex systems.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"author\",\"content\":\"Secure File USA\"}],[\"$\",\"meta\",\"3\",{\"name\":\"keywords\",\"content\":\"AI,local-first,engineering assistant,LLM,privacy,security,on-premise\"}],[\"$\",\"meta\",\"4\",{\"property\":\"og:title\",\"content\":\"Moose | Local-First AI Engineering Assistant\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:description\",\"content\":\"AI that never leaves your building. Multi-agent orchestration with complete data sovereignty.\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"7\",{\"name\":\"twitter:card\",\"content\":\"summary\"}],[\"$\",\"meta\",\"8\",{\"name\":\"twitter:title\",\"content\":\"Moose | Local-First AI Engineering Assistant\"}],[\"$\",\"meta\",\"9\",{\"name\":\"twitter:description\",\"content\":\"AI that never leaves your building. Multi-agent orchestration with complete data sovereignty.\"}],[\"$\",\"link\",\"10\",{\"rel\":\"icon\",\"href\":\"/favicon.ico?favicon.0b3bf435.ico\",\"sizes\":\"256x256\",\"type\":\"image/x-icon\"}],[\"$\",\"$L13\",\"11\",{}]]\n"])</script></body></html>
