@@ -1,0 +1,114 @@
+---
+/**
+ * ForestScene — All SVG parallax layers for the journey homepage.
+ * Mountains (L1), mid-forest canopy (L2), near trees (L4), foreground leaves + fireflies (L6).
+ */
+---
+
+<!-- L1: Far Mountains -->
+<div class="journey-layer journey-layer--mountains" id="layer-mountains" aria-hidden="true">
+  <svg class="forest-svg forest-svg--mountains" viewBox="0 0 1440 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Back ridge -->
+    <path d="M0 400 L0 320 Q120 240 240 280 Q360 200 480 260 Q540 220 600 240 Q720 160 840 220 Q960 180 1080 240 Q1200 200 1320 260 Q1380 240 1440 280 L1440 400Z" fill="#0a1512" opacity="0.6"/>
+    <!-- Front ridge -->
+    <path d="M0 400 L0 340 Q180 280 360 320 Q480 260 600 300 Q720 240 840 290 Q960 260 1080 300 Q1200 270 1320 310 Q1400 290 1440 320 L1440 400Z" fill="#0a1512" opacity="0.9"/>
+    <!-- Subtle peak highlights -->
+    <path d="M360 320 Q420 290 480 260" stroke="rgba(74,122,101,0.15)" stroke-width="1" fill="none"/>
+    <path d="M840 290 Q900 250 960 260" stroke="rgba(74,122,101,0.1)" stroke-width="1" fill="none"/>
+  </svg>
+</div>
+
+<!-- L2: Mid Forest Canopy -->
+<div class="journey-layer journey-layer--forest" id="layer-forest" aria-hidden="true">
+  <svg class="forest-svg forest-svg--canopy" viewBox="0 0 1440 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Tree canopy silhouettes -->
+    <path d="M0 500 L0 380 Q40 340 80 360 Q120 300 160 340 Q200 310 240 350 Q280 280 320 330 Q360 290 400 340 Q440 310 480 350 Q520 270 560 320 Q600 290 640 340 Q680 300 720 350 Q760 280 800 330 Q840 310 880 350 Q920 290 960 340 Q1000 310 1040 350 Q1080 280 1120 330 Q1160 300 1200 340 Q1240 290 1280 330 Q1320 310 1360 340 Q1400 320 1440 350 L1440 500Z" fill="#162822" opacity="0.7"/>
+    <!-- Second canopy layer, slightly offset -->
+    <path d="M0 500 L0 400 Q60 360 120 380 Q180 340 240 370 Q300 330 360 360 Q420 320 480 370 Q540 340 600 380 Q660 320 720 360 Q780 340 840 370 Q900 330 960 360 Q1020 340 1080 370 Q1140 330 1200 360 Q1260 340 1320 370 Q1380 350 1440 380 L1440 500Z" fill="#162822" opacity="0.5"/>
+    <!-- Canopy texture dots -->
+    <circle cx="200" cy="360" r="3" fill="#1a3028" opacity="0.4"/>
+    <circle cx="500" cy="340" r="4" fill="#1a3028" opacity="0.3"/>
+    <circle cx="800" cy="350" r="3" fill="#1a3028" opacity="0.4"/>
+    <circle cx="1100" cy="340" r="4" fill="#1a3028" opacity="0.3"/>
+  </svg>
+</div>
+
+<!-- L4: Near Trees (cursor-reactive) -->
+<div class="journey-layer journey-layer--trees" id="layer-trees" aria-hidden="true">
+  <!-- Left tree cluster -->
+  <div class="near-tree near-tree--left" id="near-tree-left">
+    <svg viewBox="0 0 200 600" xmlns="http://www.w3.org/2000/svg" style="width:200px;height:100vh;position:absolute;bottom:0;left:0">
+      <!-- Trunk -->
+      <path d="M90 600 L85 350 Q80 300 75 250 L70 200 Q75 180 80 160" stroke="#264035" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <!-- Branch left -->
+      <path d="M80 300 Q50 270 30 230" stroke="#264035" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M75 250 Q40 220 20 180" stroke="#264035" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <!-- Branch right -->
+      <path d="M85 350 Q120 310 150 280" stroke="#264035" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <!-- Leaves clusters -->
+      <ellipse cx="30" cy="220" rx="35" ry="25" fill="#264035" opacity="0.8"/>
+      <ellipse cx="20" cy="170" rx="30" ry="20" fill="#1a3028" opacity="0.7"/>
+      <ellipse cx="150" cy="270" rx="30" ry="22" fill="#264035" opacity="0.7"/>
+      <ellipse cx="80" cy="150" rx="40" ry="30" fill="#1a3028" opacity="0.6"/>
+      <!-- Gold accent leaves -->
+      <ellipse cx="45" cy="210" rx="4" ry="7" fill="#d4b06a" opacity="0.15" transform="rotate(-20 45 210)"/>
+      <ellipse cx="140" cy="265" rx="3" ry="6" fill="#d4b06a" opacity="0.12" transform="rotate(15 140 265)"/>
+    </svg>
+  </div>
+
+  <!-- Right tree cluster -->
+  <div class="near-tree near-tree--right" id="near-tree-right">
+    <svg viewBox="0 0 200 600" xmlns="http://www.w3.org/2000/svg" style="width:200px;height:100vh;position:absolute;bottom:0;right:0">
+      <!-- Trunk -->
+      <path d="M110 600 L115 380 Q120 320 125 260 L130 200 Q125 170 120 140" stroke="#264035" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <!-- Branch left -->
+      <path d="M115 380 Q80 340 50 300" stroke="#264035" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <!-- Branch right -->
+      <path d="M120 320 Q155 280 175 240" stroke="#264035" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M125 260 Q160 230 180 190" stroke="#264035" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <!-- Leaves clusters -->
+      <ellipse cx="50" cy="290" rx="30" ry="22" fill="#264035" opacity="0.8"/>
+      <ellipse cx="175" cy="230" rx="35" ry="25" fill="#264035" opacity="0.7"/>
+      <ellipse cx="180" cy="180" rx="28" ry="20" fill="#1a3028" opacity="0.7"/>
+      <ellipse cx="120" cy="130" rx="40" ry="28" fill="#1a3028" opacity="0.6"/>
+      <!-- Gold accent leaves -->
+      <ellipse cx="165" cy="225" rx="4" ry="7" fill="#d4b06a" opacity="0.15" transform="rotate(20 165 225)"/>
+      <ellipse cx="60" cy="285" rx="3" ry="6" fill="#d4b06a" opacity="0.12" transform="rotate(-15 60 285)"/>
+    </svg>
+  </div>
+</div>
+
+<!-- L6: Foreground — Floating Leaves + Fireflies -->
+<div class="journey-layer journey-layer--foreground" id="layer-foreground" aria-hidden="true">
+  <!-- Floating leaves -->
+  <svg class="floating-leaf" style="top:10%;left:15%;width:20px;height:20px;animation-duration:18s;animation-delay:0s" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 2 Q16 8 14 14 Q10 18 6 14 Q4 8 10 2Z" fill="#4a7a65" opacity="0.6"/>
+    <path d="M10 4 L10 14" stroke="#3d6050" stroke-width="0.5" fill="none"/>
+  </svg>
+  <svg class="floating-leaf" style="top:25%;left:70%;width:16px;height:16px;animation-duration:22s;animation-delay:-5s" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 2 Q16 8 14 14 Q10 18 6 14 Q4 8 10 2Z" fill="#4a7a65" opacity="0.5"/>
+    <path d="M10 4 L10 14" stroke="#3d6050" stroke-width="0.5" fill="none"/>
+  </svg>
+  <svg class="floating-leaf" style="top:50%;left:40%;width:14px;height:14px;animation-duration:20s;animation-delay:-10s" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 2 Q16 8 14 14 Q10 18 6 14 Q4 8 10 2Z" fill="#3d6050" opacity="0.4"/>
+    <path d="M10 4 L10 14" stroke="#2d4a3e" stroke-width="0.5" fill="none"/>
+  </svg>
+  <svg class="floating-leaf" style="top:70%;left:85%;width:18px;height:18px;animation-duration:25s;animation-delay:-8s" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 2 Q16 8 14 14 Q10 18 6 14 Q4 8 10 2Z" fill="#4a7a65" opacity="0.5"/>
+    <path d="M10 4 L10 14" stroke="#3d6050" stroke-width="0.5" fill="none"/>
+  </svg>
+
+  <!-- Fireflies -->
+  <div class="firefly" style="top:15%;left:20%;animation-duration:12s,4s;animation-delay:0s,0s"></div>
+  <div class="firefly" style="top:30%;left:75%;animation-duration:15s,5s;animation-delay:-3s,-1s"></div>
+  <div class="firefly" style="top:45%;left:35%;animation-duration:18s,6s;animation-delay:-6s,-2s"></div>
+  <div class="firefly" style="top:55%;left:60%;animation-duration:14s,4.5s;animation-delay:-4s,-1.5s"></div>
+  <div class="firefly" style="top:20%;left:50%;animation-duration:16s,5.5s;animation-delay:-8s,-3s"></div>
+  <div class="firefly" style="top:65%;left:15%;animation-duration:20s,7s;animation-delay:-2s,-0.5s"></div>
+  <div class="firefly" style="top:40%;left:85%;animation-duration:13s,4s;animation-delay:-5s,-2.5s"></div>
+  <div class="firefly" style="top:75%;left:45%;animation-duration:17s,6s;animation-delay:-7s,-1s"></div>
+  <div class="firefly" style="top:35%;left:10%;animation-duration:19s,5s;animation-delay:-1s,-3s"></div>
+  <div class="firefly" style="top:60%;left:90%;animation-duration:14s,4.5s;animation-delay:-9s,-2s"></div>
+  <div class="firefly" style="top:80%;left:30%;animation-duration:16s,5s;animation-delay:-4s,-1s"></div>
+  <div class="firefly" style="top:10%;left:65%;animation-duration:18s,6s;animation-delay:-6s,-0.5s"></div>
+</div>

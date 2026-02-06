@@ -1,0 +1,59 @@
+---
+/**
+ * FlightPath — Hidden SVG path that defines the Moose's curved motion path.
+ * GSAP MotionPathPlugin reads this path to animate the Moose along it.
+ * The path is defined in viewport-relative coordinates (0-100 range mapped to viewport).
+ */
+---
+
+<svg id="flight-path-svg" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!--
+    Moose flight path through the scroll journey.
+    Coordinates are in a 0-100 viewBox, mapped to the viewport.
+    The path curves through positions that align with content panels.
+
+    Journey map:
+    - Start: center (50,50) — Hero
+    - Shrink + fly right — Transition
+    - Right side (75,50) — Who We Are
+    - Loop around center — What We Believe (pinned)
+    - Left side (25,50) — How We Work
+    - Weave through center — What We Do (pinned)
+    - Land right-center (65,55) — Projects
+    - Hover left-center (30,50) — Founder
+    - Return center (50,45) — Get Involved
+  -->
+  <path
+    id="moose-flight-path"
+    d="M 50,50
+       C 55,45 65,40 75,42
+       C 80,44 82,48 75,50
+       C 68,52 60,48 65,45
+       C 72,40 80,42 78,48
+       C 76,54 65,55 55,52
+       C 45,49 35,45 25,48
+       C 18,50 20,55 25,52
+       C 30,49 40,45 50,48
+       C 60,51 70,53 65,55
+       C 58,57 45,56 35,53
+       C 28,51 25,48 30,50
+       C 38,52 45,48 50,45"
+    fill="none"
+    stroke="none"
+  />
+
+  <!-- Mobile simplified path (vertical with gentle curves) -->
+  <path
+    id="moose-flight-path-mobile"
+    d="M 50,50
+       C 55,48 58,46 55,45
+       C 52,44 48,46 50,48
+       C 52,50 55,48 53,46
+       C 51,44 47,46 50,48
+       C 53,50 52,48 50,46
+       C 48,44 49,46 50,48
+       C 51,50 50,48 50,45"
+    fill="none"
+    stroke="none"
+  />
+</svg>

@@ -1,0 +1,319 @@
+/* ── Journey Scroll Container ── */
+.journey-scroll {
+  position: relative;
+  width: 100%;
+  /* 900vh total scroll depth */
+  height: 900vh;
+}
+
+/* ── Fixed Layers ── */
+.journey-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateZ(0); /* GPU composite hint */
+}
+
+/* Sky gradient (L0) */
+.journey-layer--sky {
+  z-index: 0;
+  background: linear-gradient(180deg, #0a0908 0%, #0a1210 40%, #0a1512 100%);
+  transition: background 0.3s;
+}
+
+/* Far mountains (L1) */
+.journey-layer--mountains {
+  z-index: 1;
+}
+
+/* Mid forest (L2) */
+.journey-layer--forest {
+  z-index: 2;
+}
+
+/* Content (L3) — not fixed, scrolls naturally */
+.journey-layer--content {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* Near trees (L4) */
+.journey-layer--trees {
+  z-index: 15;
+}
+
+/* Moose + Trail (L5) */
+.journey-layer--moose {
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Foreground leaves + fireflies (L6) */
+.journey-layer--foreground {
+  z-index: 25;
+}
+
+/* ── Particle Canvas ── */
+#particle-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 19;
+  pointer-events: none;
+}
+
+/* ── Journey Moose ── */
+#journey-moose {
+  position: fixed;
+  z-index: 20;
+  pointer-events: none;
+  /* Size stays fixed; GSAP uses scale() for shrink + xPercent/yPercent for centering */
+  width: 160px;
+  height: 160px;
+  left: 50%;
+  top: 50%;
+  /* No CSS transform — GSAP manages xPercent, yPercent, scale, x, y */
+}
+
+/* ── Content Panels ── */
+.content-panel {
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(40px);
+  pointer-events: auto;
+}
+
+.content-panel.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Panel positioning along the scroll journey */
+.content-panel--hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.content-panel--section {
+  padding: 7rem 0;
+}
+
+.content-panel--pinned {
+  padding: 7rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ── SVG Layer Styling ── */
+.forest-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.forest-svg--mountains {
+  opacity: 0.8;
+}
+
+.forest-svg--canopy {
+  opacity: 0.7;
+}
+
+.forest-svg--trees {
+  opacity: 0.9;
+}
+
+/* ── Near Tree Containers (cursor-reactive) ── */
+.near-tree {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+}
+
+.near-tree--left {
+  left: -20px;
+}
+
+.near-tree--right {
+  right: -20px;
+}
+
+/* ── Floating Leaves ── */
+.floating-leaf {
+  position: absolute;
+  opacity: 0.5;
+  will-change: transform;
+  animation: leaf-drift linear infinite;
+}
+
+@keyframes leaf-drift {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-80px, 100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ── Fireflies ── */
+.firefly {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  box-shadow: 0 0 6px 2px rgba(212, 176, 106, 0.4),
+              0 0 12px 4px rgba(212, 176, 106, 0.15);
+  animation: firefly-float linear infinite, firefly-glow ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes firefly-float {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(30px, -40px);
+  }
+  50% {
+    transform: translate(-20px, -20px);
+  }
+  75% {
+    transform: translate(15px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes firefly-glow {
+  0%, 100% {
+    opacity: 0.2;
+    box-shadow: 0 0 4px 1px rgba(212, 176, 106, 0.2);
+  }
+  50% {
+    opacity: 0.9;
+    box-shadow: 0 0 8px 3px rgba(212, 176, 106, 0.5),
+                0 0 16px 6px rgba(212, 176, 106, 0.2);
+  }
+}
+
+/* ── Flight Path SVG (hidden but referenced by GSAP) ── */
+#flight-path-svg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* ── Mobile Adjustments ── */
+@media (max-width: 767px) {
+  .journey-scroll {
+    height: 700vh;
+  }
+
+  #journey-moose {
+    width: 60px;
+    height: 60px;
+  }
+
+  .near-tree {
+    display: none;
+  }
+
+  .floating-leaf {
+    display: none;
+  }
+
+  .firefly:nth-child(n+7) {
+    display: none;
+  }
+
+  .content-panel--pinned {
+    min-height: auto;
+  }
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .journey-layer--mountains,
+  .journey-layer--forest,
+  .journey-layer--trees,
+  .journey-layer--foreground {
+    transform: none !important;
+  }
+
+  #journey-moose {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 0 auto 2rem;
+  }
+
+  .content-panel {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .firefly {
+    animation: none !important;
+    opacity: 0.4;
+  }
+
+  .floating-leaf {
+    animation: none !important;
+  }
+
+  #particle-canvas {
+    display: none;
+  }
+
+  .journey-scroll {
+    height: auto;
+  }
+
+  .journey-layer {
+    position: relative;
+  }
+
+  .journey-layer--sky {
+    position: fixed;
+  }
+}
+
+/* ── Nav transparency on journey page ── */
+.nav-transparent {
+  background: transparent !important;
+  border-bottom-color: transparent !important;
+}
+
+.nav-transparent.nav-scrolled {
+  background: rgba(10, 9, 8, 0.8) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.06) !important;
+}

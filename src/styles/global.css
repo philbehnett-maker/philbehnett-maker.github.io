@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ── */
+@theme {
+  --color-background: #0a0908;
+  --color-foreground: #f2ebe0;
+  --color-foreground-muted: #a09888;
+  --color-cream: #f2ebe0;
+  --color-gold: #d4b06a;
+  --color-gold-light: #e8d4a8;
+  --color-green-deep: #0a1512;
+  --color-green-mid: #264035;
+  --color-green-glow: #4a7a65;
+  --color-glass-bg: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.06);
+
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Noise overlay ── */
+.noise-overlay {
+  position: relative;
+}
+.noise-overlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── Glass card ── */
+.glass-card {
+  background: var(--color-glass-bg);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: blur(12px);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.glass-card:hover {
+  border-color: rgba(212, 176, 106, 0.15);
+  box-shadow: 0 0 30px rgba(212, 176, 106, 0.05);
+}
+
+/* ── Glass nav ── */
+.glass-nav {
+  background: rgba(10, 9, 8, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 50%, var(--color-gold) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: text-shimmer 8s ease-in-out infinite;
+}
+
+@keyframes text-shimmer {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 200% center; }
+}
+
+/* ── Buttons ── */
+.btn-glossy {
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-glossy::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+.btn-glossy:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 30px rgba(212, 176, 106, 0.3);
+}
+
+.btn-outline {
+  border: 1px solid rgba(212, 176, 106, 0.3);
+  transition: border-color 0.3s, background 0.3s;
+}
+.btn-outline:hover {
+  border-color: var(--color-gold);
+  background: rgba(212, 176, 106, 0.05);
+}
+
+/* ── Badge sheen ── */
+.badge-sheen {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s, border-color 0.3s;
+}
+.badge-sheen:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(212, 176, 106, 0.3);
+}
+
+/* ── Icon glow ── */
+.icon-glow {
+  background: rgba(212, 176, 106, 0.1);
+  border: 1px solid rgba(212, 176, 106, 0.15);
+}
+
+/* ── Section divider ── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 176, 106, 0.2) 50%, transparent 100%);
+}
+
+/* ── Footer gradient ── */
+.footer-gradient {
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 21, 18, 0.5) 100%);
+}
+
+/* ── Hero bg ── */
+.hero-bg {
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(10, 21, 18, 0.8) 0%, var(--color-background) 100%);
+}
+
+/* ── Ambient orbs ── */
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  animation: orb-float 25s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -20px) scale(1.05); }
+  50% { transform: translate(-10px, 20px) scale(0.95); }
+  75% { transform: translate(-30px, -10px) scale(1.02); }
+}
+
+/* ── Float animation ── */
+.animate-float {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ── Scroll indicator ── */
+.scroll-indicator {
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
+  50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
+}
+
+/* ── Feature card ── */
+.feature-card {
+  transition: transform 0.3s, border-color 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ── Research tag ── */
+.research-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(212, 176, 106, 0.1);
+  color: var(--color-gold);
+  border: 1px solid rgba(212, 176, 106, 0.2);
+}
+
+/* ── Research card hover ── */
+.research-card {
+  transition: transform 0.3s;
+}
+.research-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ── SVG section masks ── */
+.section-mask-top {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.section-mask-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+/* ── GSAP animation prep (will-change for performance) ── */
+[data-animate] {
+  will-change: transform, opacity;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .ambient-orb { display: none; }
+}

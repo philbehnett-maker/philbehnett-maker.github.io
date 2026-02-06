@@ -1,0 +1,76 @@
+/* ── Moose Character Animation States ── */
+
+.moose-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.mf-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
+}
+
+/* IDLE */
+.mf-idle .body-group { animation: idle-breathe 5s ease-in-out infinite; }
+.mf-idle .wing-left { animation: idle-wing-l 6s ease-in-out infinite; }
+.mf-idle .wing-right { animation: idle-wing-r 6s ease-in-out infinite; }
+.mf-idle .tail-feathers { animation: idle-tail 7s ease-in-out infinite; }
+
+/* THINKING */
+.mf-thinking .body-group { animation: think-alert 2.5s ease-in-out infinite; }
+.mf-thinking .wing-left,
+.mf-thinking .wing-right { animation: think-wings 0.8s ease-in-out infinite alternate; }
+.mf-thinking .ear-left,
+.mf-thinking .ear-right { animation: think-ears 1.5s ease-in-out infinite; }
+.mf-thinking .glow-ring { opacity: 1; animation: glow-pulse 2s ease-in-out infinite; }
+
+/* TALKING */
+.mf-talking .body-group { animation: talk-engage 0.6s ease-in-out infinite; }
+.mf-talking .wing-left { animation: talk-wing-l 1s ease-in-out infinite; }
+.mf-talking .wing-right { animation: talk-wing-r 1s ease-in-out infinite; }
+.mf-talking .beak { animation: talk-beak 0.35s ease-in-out infinite; }
+
+/* SUCCESS */
+.mf-success .body-group { animation: success-proud 0.8s cubic-bezier(0.34, 1.2, 0.64, 1) infinite; }
+.mf-success .wing-left { animation: success-wing-l 0.6s ease-out forwards; }
+.mf-success .wing-right { animation: success-wing-r 0.6s ease-out forwards; }
+.mf-success .crown-glow { opacity: 1; animation: crown-shine 1s ease-in-out infinite; }
+
+/* ERROR */
+.mf-error .body-group { animation: error-wary 0.4s ease-in-out infinite; }
+.mf-error .wing-left,
+.mf-error .wing-right { animation: error-wings 0.5s ease-out forwards; }
+.mf-error .ear-left,
+.mf-error .ear-right { animation: error-ears 0.4s ease-out forwards; }
+
+/* GREETING */
+.mf-greeting .body-group { animation: greet-nod 0.8s ease-in-out infinite; }
+.mf-greeting .wing-right { animation: greet-wing 0.5s ease-in-out infinite alternate; transform-origin: 75% 70%; }
+
+/* KEYFRAMES */
+@keyframes idle-breathe { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+@keyframes idle-wing-l { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-2deg); } }
+@keyframes idle-wing-r { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(2deg); } }
+@keyframes idle-tail { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(1deg); } }
+@keyframes think-alert { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes think-wings { 0% { transform: translateY(0); } 100% { transform: translateY(-4px); } }
+@keyframes think-ears { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(3deg); } }
+@keyframes glow-pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.6; } }
+@keyframes talk-engage { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+@keyframes talk-wing-l { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-5deg); } }
+@keyframes talk-wing-r { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(5deg); } }
+@keyframes talk-beak { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(0.85); } }
+@keyframes success-proud { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-6px) scale(1.01); } }
+@keyframes success-wing-l { 0% { transform: rotate(0deg); } 100% { transform: rotate(-18deg) translateY(-5px); } }
+@keyframes success-wing-r { 0% { transform: rotate(0deg); } 100% { transform: rotate(18deg) translateY(-5px); } }
+@keyframes crown-shine { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.9; } }
+@keyframes error-wary { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-2px); } 75% { transform: translateX(2px); } }
+@keyframes error-wings { 0% { transform: rotate(0deg); } 100% { transform: rotate(5deg) translateY(3px); } }
+@keyframes error-ears { 0% { transform: rotate(0deg); } 100% { transform: rotate(-8deg); } }
+@keyframes greet-nod { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-4px) rotate(1deg); } }
+@keyframes greet-wing { 0% { transform: rotate(0deg); } 100% { transform: rotate(10deg); } }
+
+.glow-ring { opacity: 0; transition: opacity 0.3s; }
+.crown-glow { opacity: 0; transition: opacity 0.3s; }

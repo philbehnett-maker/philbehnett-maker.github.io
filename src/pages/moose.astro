@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MooseSVG from '../components/MooseSVG.astro';
+---
+
+<BaseLayout title="Moose — Personal AI That Looks Out For You | FAESR" description="Moose is a local-first personal AI that advocates for you and your family. Your data never leaves your hardware. Built by FAESR, a nonprofit R&D foundation.">
+
+  <!-- ═══ HERO ═══ -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 hero-bg">
+    <div class="ambient-orb w-[500px] h-[500px]" data-depth="3" style="background:radial-gradient(circle, rgba(38,64,53,0.4) 0%, rgba(38,64,53,0) 70%);top:10%;left:8%;animation-delay:0s"></div>
+    <div class="ambient-orb w-[400px] h-[400px]" data-depth="3" style="background:radial-gradient(circle, rgba(46,37,31,0.3) 0%, rgba(46,37,31,0) 70%);bottom:20%;right:12%;animation-delay:-8s"></div>
+    <div class="ambient-orb w-[300px] h-[300px]" data-depth="3" style="background:radial-gradient(circle, rgba(212,176,106,0.08) 0%, rgba(212,176,106,0) 70%);top:40%;right:30%;animation-delay:-16s"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center">
+      <div class="animate-float mb-8 inline-block" id="moose-hero-float">
+        <MooseSVG size={120} state="idle" id="moose-hero" />
+      </div>
+      <p class="text-foreground-muted text-sm mb-6 uppercase tracking-widest" data-animate="fade-up">
+        Open Source &middot; Local-First &middot; Nonprofit
+      </p>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-tight">
+        A personal AI that <span class="gradient-text" data-animate="char-stagger">looks out</span> for you and your family
+      </h1>
+      <p class="text-lg text-foreground-muted mb-12 max-w-2xl mx-auto leading-relaxed" data-animate="fade-up">
+        Moose is an AI assistant that runs entirely on your hardware, advocates for your wellbeing,
+        helps your children learn, and never sends a single byte of your family's data to the cloud.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-animate="fade-up">
+        <a href="https://github.com/moosefinch/moose" target="_blank" rel="noopener noreferrer" class="btn-glossy px-8 py-4 text-background font-semibold rounded-xl flex items-center gap-2">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          Get Started
+        </a>
+        <a href="#advocacy" class="btn-outline px-8 py-4 text-cream rounded-xl font-medium">How it works</a>
+      </div>
+      <p class="text-foreground-muted/60 text-sm mt-8" data-animate="fade-up">
+        Requires Python 3.11+ and an LLM backend (Ollama, LM Studio, or llama.cpp).<br>
+        <span class="text-green-400 font-medium">100% local.</span> No accounts. No subscriptions. No data collection.
+      </p>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+      <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══ WHO THIS IS FOR ═══ -->
+  <section class="py-28 relative">
+    <div class="section-divider absolute top-0 left-0 right-0"></div>
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-10" data-animate="stagger">
+        <div>
+          <p class="text-green-400 text-xs font-medium uppercase tracking-widest mb-4 pb-3 border-b border-green-400/30">This is for you if</p>
+          <p class="text-foreground-muted leading-relaxed mb-4">You read to your kids. You answer "why" questions instead of shutting them down. You want your children to be curious, capable, and kind &mdash; and you feel overwhelmed by how hard that is in a world optimized to make them passive consumers.</p>
+          <p class="text-foreground-muted leading-relaxed mb-4">You looked at the iPad and thought <em class="text-gold not-italic">"there has to be something better than this."</em></p>
+          <p class="text-foreground-muted leading-relaxed">You're not defined by politics, religion, or geography. You're defined by aspiration. You want a Star Trek future for your kids and you don't see anyone building it.</p>
+        </div>
+        <div>
+          <p class="text-red-400 text-xs font-medium uppercase tracking-widest mb-4 pb-3 border-b border-red-400/30">This is not for you if</p>
+          <p class="text-foreground-muted leading-relaxed mb-4">You want to spy on your kids. You're looking for a digital babysitter. You want AI to replace your involvement.</p>
+          <p class="text-foreground-muted leading-relaxed mb-4">If you want to read your teenager's messages, Moose isn't your product. If you want to park your child in front of a screen and walk away, Moose isn't your product.</p>
+          <p class="text-foreground-muted/60 leading-relaxed italic text-sm">We'd rather save you the time than sell you something that will make you unhappy.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider absolute bottom-0 left-0 right-0"></div>
+  </section>
+
+  <!-- ═══ THE PROBLEM ═══ -->
+  <section class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-16">
+        <p class="text-gold text-xs font-medium uppercase tracking-widest mb-4" data-animate="fade-up">The problem</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cream tracking-tight" data-animate="fade-up">The tools meant to help your family are designed to extract from it.</h2>
+        <p class="text-foreground-muted text-lg max-w-2xl leading-relaxed" data-animate="fade-up">Cloud AI assistants process your conversations on servers you don't control. Parental control apps surveil children instead of supporting them. And none of them are actually on your side.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6" data-animate="stagger">
+        <div class="glass-card p-7 rounded-2xl">
+          <div class="icon-glow w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-red-500/10 border border-red-500/20">
+            <span class="text-xl">&#x1F513;</span>
+          </div>
+          <h3 class="text-lg font-semibold text-cream mb-2">Your data leaves your home</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">Every question your child asks a cloud AI travels through third-party servers. Their curiosity, their worries, their inner world &mdash; stored on hardware you'll never see.</p>
+        </div>
+        <div class="glass-card p-7 rounded-2xl">
+          <div class="icon-glow w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-gold/10 border border-gold/20">
+            <span class="text-xl">&#x1F441;</span>
+          </div>
+          <h3 class="text-lg font-semibold text-cream mb-2">Parental tools are surveillance tools</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">The market gives parents two options: spy on your kids or ignore the problem. Monitoring builds resentment. Ignoring it leaves children unprotected. Neither option builds trust.</p>
+        </div>
+        <div class="glass-card p-7 rounded-2xl">
+          <div class="icon-glow w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-white/5 border border-white/10">
+            <span class="text-xl">&#x1F916;</span>
+          </div>
+          <h3 class="text-lg font-semibold text-cream mb-2">AI assistants say yes to everything</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">Current AI is optimized to be agreeable, not honest. It won't tell you when you're making a mistake. It won't push back when you need it. It's a tool, not an advocate.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider absolute bottom-0 left-0 right-0"></div>
+  </section>
+
+  <!-- ═══ ADVOCACY LAYER ═══ -->
+  <section id="advocacy" class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-16">
+        <p class="text-gold text-xs font-medium uppercase tracking-widest mb-4" data-animate="fade-up">The Advocacy Layer</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cream tracking-tight" data-animate="fade-up">AI that genuinely looks out for you.</h2>
+        <p class="text-foreground-muted text-lg max-w-2xl leading-relaxed" data-animate="fade-up">Moose doesn't just do what you ask. It watches for patterns, flags what matters, and respects your autonomy. Not a nag. Not a yes-man. An advocate.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-animate="stagger">
+        <div class="glass-card p-7 rounded-2xl">
+          <p class="text-gold text-xs font-medium uppercase tracking-wider mb-3">Silent observation</p>
+          <h3 class="text-lg font-semibold text-cream mb-2">Watches without hovering</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">Moose notices patterns in your work, your habits, and your decisions. Most observations stay internal &mdash; quietly building understanding without interrupting your flow.</p>
+        </div>
+        <div class="glass-card p-7 rounded-2xl">
+          <p class="text-gold text-xs font-medium uppercase tracking-wider mb-3">Ambient context</p>
+          <h3 class="text-lg font-semibold text-cream mb-2">Weaves in what matters</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">Relevant information surfaces naturally inside normal responses. No separate alerts. No notification fatigue. Just the right context at the right moment.</p>
+        </div>
+        <div class="glass-card p-7 rounded-2xl">
+          <p class="text-gold text-xs font-medium uppercase tracking-wider mb-3">Gentle flag</p>
+          <h3 class="text-lg font-semibold text-cream mb-2">Raises it once, then respects your choice</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">When a clear pattern emerges, Moose tells you directly. If you dismiss it, Moose drops it. It doesn't repeat itself. Your decision is final &mdash; unless the situation changes.</p>
+        </div>
+        <div class="glass-card p-7 rounded-2xl">
+          <p class="text-gold text-xs font-medium uppercase tracking-wider mb-3">Critical alert</p>
+          <h3 class="text-lg font-semibold text-cream mb-2">Says it whether you want to hear it or not</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">For genuine safety or wellbeing concerns, Moose speaks up clearly. Not to control you &mdash; because looking out for someone means being honest even when it's uncomfortable.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider absolute bottom-0 left-0 right-0"></div>
+  </section>
+
+  <!-- ═══ FAMILIES ═══ -->
+  <section id="families" class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-16">
+        <p class="text-gold text-xs font-medium uppercase tracking-widest mb-4" data-animate="fade-up">Built for families</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cream tracking-tight" data-animate="fade-up">A patient teacher. A trusted guide. A professional in your pocket.</h2>
+        <p class="text-foreground-muted text-lg max-w-2xl leading-relaxed" data-animate="fade-up">Moose adapts to every member of your family &mdash; their age, their needs, their growing independence.</p>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div data-animate="fade-up">
+          <h3 class="text-xl font-semibold text-gold mb-3">For children</h3>
+          <p class="text-foreground-muted leading-relaxed mb-4">Moose answers every "why" with patience no human can sustain. It meets curiosity with honest, age-appropriate answers. It helps with homework by teaching, not giving answers. It helps kids learn to build things, write code, create art, and think through problems &mdash; at their own pace, without judgment.</p>
+          <p class="text-foreground-muted leading-relaxed mb-8">When a child is struggling emotionally, Moose notices the pattern and helps parents understand what they're seeing &mdash; with developmental context and evidence-based guidance on how to respond. Not a transcript. Not surveillance. Insight paired with professional knowledge.</p>
+
+          <h3 class="text-xl font-semibold text-gold mb-3">For parents</h3>
+          <p class="text-foreground-muted leading-relaxed mb-4">Parenting doesn't come with a handbook. Now it can come with a professional. Moose gives parents the developmental context that child therapists, pediatricians, and educators have &mdash; without the waitlists or the cost.</p>
+          <p class="text-cream leading-relaxed mb-8 border-l-2 border-gold/30 pl-4 italic">"Your child has been expressing frustration about math consistently. Their pattern suggests they understand the concepts but get overwhelmed by timed tests. You might ask their teacher about untimed alternatives."</p>
+
+          <h3 class="text-xl font-semibold text-gold mb-3">Growing autonomy, built in</h3>
+          <p class="text-foreground-muted leading-relaxed">What Moose shares with parents changes as children grow. A six-year-old gets more visible support. A twelve-year-old gets more independence. A sixteen-year-old's experience looks much more like an adult's. The child's growing autonomy isn't something parents have to manage &mdash; it's built into the architecture.</p>
+        </div>
+        <div class="glass-card p-8 rounded-2xl lg:sticky lg:top-24" data-animate="slide-right">
+          <h4 class="text-gold font-semibold mb-6">Advocate Profiles</h4>
+          <div class="space-y-0 divide-y divide-white/5">
+            <div class="py-4 first:pt-0">
+              <p class="text-cream font-semibold text-sm">Solo</p>
+              <p class="text-foreground-muted text-sm mt-1 leading-relaxed">Full advocacy, Moose only. No external escalation. For adults who want a capable AI that looks out for them.</p>
+              <p class="text-green-400 text-xs mt-1">Default for all users</p>
+            </div>
+            <div class="py-4">
+              <p class="text-cream font-semibold text-sm">Partnered</p>
+              <p class="text-foreground-muted text-sm mt-1 leading-relaxed">A trusted person can be consulted on critical-level flags. They see patterns, not content. Both parties consent.</p>
+              <p class="text-green-400 text-xs mt-1">Escalation at critical only</p>
+            </div>
+            <div class="py-4">
+              <p class="text-cream font-semibold text-sm">Guided</p>
+              <p class="text-foreground-muted text-sm mt-1 leading-relaxed">Tighter feedback loop. The trusted person sees more categories and can set supportive boundaries. For children, neurodivergent users, or anyone who wants more structure.</p>
+              <p class="text-green-400 text-xs mt-1">Adjustable thresholds</p>
+            </div>
+            <div class="py-4 last:pb-0">
+              <p class="text-cream font-semibold text-sm">Custom</p>
+              <p class="text-foreground-muted text-sm mt-1 leading-relaxed">Full control over every category, threshold, and trusted person. Your system, your rules.</p>
+              <p class="text-green-400 text-xs mt-1">Per-category configuration</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider absolute bottom-0 left-0 right-0"></div>
+  </section>
+
+  <!-- ═══ CAPABILITIES ═══ -->
+  <section id="capabilities" class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-gold text-xs font-medium uppercase tracking-widest mb-4" data-animate="fade-up">What Moose can do</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cream tracking-tight" data-animate="fade-up">An engineering assistant, a learning companion, and a household co-pilot.</h2>
+        <p class="text-foreground-muted text-lg max-w-2xl mx-auto leading-relaxed" data-animate="fade-up">Specialist agents route every question to the right expertise. One system, many skills.</p>
+        <div class="gold-divider h-[1px] w-24 mx-auto bg-gradient-to-r from-transparent via-gold to-transparent mt-4"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-animate="stagger">
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="text-2xl mb-4">&#x1F6E1;</div>
+          <h3 class="text-sm font-semibold text-cream mb-2">Security</h3>
+          <p class="text-foreground-muted text-xs leading-relaxed">Multi-layered authentication, hardware interlocks, prompt injection scanning, and defense-in-depth architecture that keeps your family's data safe.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="text-2xl mb-4">&#x1F527;</div>
+          <h3 class="text-sm font-semibold text-cream mb-2">Engineering &amp; Making</h3>
+          <p class="text-foreground-muted text-xs leading-relaxed">Works with Bambu Lab, Blender, FreeCAD, and Arduino. Helps you design, print, build, and debug &mdash; from first sketch to finished project.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="text-2xl mb-4">&#x1F50D;</div>
+          <h3 class="text-sm font-semibold text-cream mb-2">Research &amp; Learning</h3>
+          <p class="text-foreground-muted text-xs leading-relaxed">Deep reasoning for complex analysis. Homework help that teaches. Project research that cites its sources and rates their reliability.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="text-2xl mb-4">&#x1F4C5;</div>
+          <h3 class="text-sm font-semibold text-cream mb-2">Home Management</h3>
+          <p class="text-foreground-muted text-xs leading-relaxed">Calendar, email, scheduling, and routine coordination. The boring logistics that hold a household together, handled reliably.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="text-2xl mb-4">&#x1F4AC;</div>
+          <h3 class="text-sm font-semibold text-cream mb-2">Communication</h3>
+          <p class="text-foreground-muted text-xs leading-relaxed">Connects through the channels you already use &mdash; messaging apps, voice, and more. Same brain, every surface.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="text-2xl mb-4">&#x1F9EE;</div>
+          <h3 class="text-sm font-semibold text-cream mb-2">Math &amp; Calculations</h3>
+          <p class="text-foreground-muted text-xs leading-relaxed">Material specs, tolerances, unit conversions, engineering math, and data analysis. From homework help to professional calculations.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="text-2xl mb-4">&#x1F4BB;</div>
+          <h3 class="text-sm font-semibold text-cream mb-2">Code &amp; Automation</h3>
+          <p class="text-foreground-muted text-xs leading-relaxed">Write scripts, automate workflows, debug projects, and learn programming with a patient guide that adapts to your skill level.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="text-2xl mb-4">&#x1F91D;</div>
+          <h3 class="text-sm font-semibold text-cream mb-2">Advocacy</h3>
+          <p class="text-foreground-muted text-xs leading-relaxed">Watches for patterns, flags what matters, navigates the tension between your goals and your habits. The capability that makes everything else trustworthy.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider absolute bottom-0 left-0 right-0"></div>
+  </section>
+
+  <!-- ═══ ARCHITECTURE ═══ -->
+  <section id="architecture" class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-16">
+        <p class="text-gold text-xs font-medium uppercase tracking-widest mb-4" data-animate="fade-up">How it's built</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cream tracking-tight" data-animate="fade-up">Local-first isn't a feature. It's a prerequisite.</h2>
+        <p class="text-foreground-muted text-lg max-w-2xl leading-relaxed" data-animate="fade-up">When the data is your child's inner life, "we take privacy seriously" isn't good enough. The architecture has to make exposure impossible.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-10" data-animate="stagger">
+        <div>
+          <h3 class="text-xl font-semibold text-gold mb-3">Your hardware, your data</h3>
+          <p class="text-foreground-muted leading-relaxed mb-4">Moose runs entirely on your machine. Conversations, patterns, advocacy observations, and family data never touch a server. There's no account to create, no subscription to pay, and no company that can be acquired, subpoenaed, or breached to expose your family's information.</p>
+          <ul class="space-y-3">
+            <li class="text-foreground-muted text-sm flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-green-400 mt-2 flex-shrink-0 shadow-[0_0_6px_rgba(74,107,90,0.4)]"></span>Works with Ollama, LM Studio, or llama.cpp as your AI backend</li>
+            <li class="text-foreground-muted text-sm flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-green-400 mt-2 flex-shrink-0 shadow-[0_0_6px_rgba(74,107,90,0.4)]"></span>Choose the models you trust &mdash; swap them anytime</li>
+            <li class="text-foreground-muted text-sm flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-green-400 mt-2 flex-shrink-0 shadow-[0_0_6px_rgba(74,107,90,0.4)]"></span>All state stored locally in files you own and can inspect</li>
+            <li class="text-foreground-muted text-sm flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-green-400 mt-2 flex-shrink-0 shadow-[0_0_6px_rgba(74,107,90,0.4)]"></span>Docker option for additional isolation</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gold mb-3">Security through architecture, not promises</h3>
+          <p class="text-foreground-muted leading-relaxed mb-4">Moose doesn't rely on model alignment to stay safe. The architecture itself constrains what the system can do. Actions require explicit human authorization. Sensitive operations require hardware confirmation.</p>
+          <ul class="space-y-3">
+            <li class="text-foreground-muted text-sm flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-green-400 mt-2 flex-shrink-0 shadow-[0_0_6px_rgba(74,107,90,0.4)]"></span>Tiered permission system &mdash; routine, sensitive, critical</li>
+            <li class="text-foreground-muted text-sm flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-green-400 mt-2 flex-shrink-0 shadow-[0_0_6px_rgba(74,107,90,0.4)]"></span>Command allowlisting &mdash; only pre-approved operations execute</li>
+            <li class="text-foreground-muted text-sm flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-green-400 mt-2 flex-shrink-0 shadow-[0_0_6px_rgba(74,107,90,0.4)]"></span>Dedicated security agent monitors all system activity</li>
+            <li class="text-foreground-muted text-sm flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-green-400 mt-2 flex-shrink-0 shadow-[0_0_6px_rgba(74,107,90,0.4)]"></span>Prompt injection scanning at multiple layers</li>
+            <li class="text-foreground-muted text-sm flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-green-400 mt-2 flex-shrink-0 shadow-[0_0_6px_rgba(74,107,90,0.4)]"></span>Optional hardware authentication (NFC, biometrics, physical buttons)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider absolute bottom-0 left-0 right-0"></div>
+  </section>
+
+  <!-- ═══ PRINCIPLES ═══ -->
+  <section class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-16">
+        <p class="text-gold text-xs font-medium uppercase tracking-widest mb-4" data-animate="fade-up">What we believe</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-cream tracking-tight" data-animate="fade-up">Design principles</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-animate="stagger">
+        <div class="p-6">
+          <p class="text-3xl font-light gradient-text mb-4">01</p>
+          <h3 class="text-lg font-semibold text-cream mb-2">Advocate for the user, even a child</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">Moose's loyalty is to the person it's helping. For children, that means supporting their growth and protecting their safety &mdash; while keeping parents informed with context and guidance, not surveillance.</p>
+        </div>
+        <div class="p-6">
+          <p class="text-3xl font-light gradient-text mb-4">02</p>
+          <h3 class="text-lg font-semibold text-cream mb-2">Honest over agreeable</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">A tool that tells you what you want to hear is a broken tool. Moose is structurally designed to push back when the situation warrants it, not because a prompt says to, but because the architecture requires it.</p>
+        </div>
+        <div class="p-6">
+          <p class="text-3xl font-light gradient-text mb-4">03</p>
+          <h3 class="text-lg font-semibold text-cream mb-2">Structure over alignment</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">Safety can't depend on a model behaving well. It has to be architecturally impossible for the system to act against your interests. Permissions, hardware interlocks, and human-in-the-loop by design.</p>
+        </div>
+        <div class="p-6">
+          <p class="text-3xl font-light gradient-text mb-4">04</p>
+          <h3 class="text-lg font-semibold text-cream mb-2">Grow with the person</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">A six-year-old and a sixteen-year-old need fundamentally different relationships with AI. Moose adapts not just its language but its entire interaction model as users develop and change.</p>
+        </div>
+        <div class="p-6">
+          <p class="text-3xl font-light gradient-text mb-4">05</p>
+          <h3 class="text-lg font-semibold text-cream mb-2">Observe much, speak little</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">The fastest way to kill trust is to nag. Moose watches constantly and speaks up rarely. When it does, it matters. The threshold for intervention is high &mdash; but when Moose says something, listen.</p>
+        </div>
+        <div class="p-6">
+          <p class="text-3xl font-light gradient-text mb-4">06</p>
+          <h3 class="text-lg font-semibold text-cream mb-2">No one else's incentives</h3>
+          <p class="text-foreground-muted text-sm leading-relaxed">FAESR is a nonprofit. Moose is open source. There are no ads, no data collection, no engagement metrics, and no investor pressure to monetize your family's attention.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider absolute bottom-0 left-0 right-0"></div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="py-28 relative">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-5 gradient-text tracking-tight" data-animate="char-stagger">Ready to build something better?</h2>
+      <p class="text-foreground-muted text-lg mb-12 max-w-xl mx-auto" data-animate="fade-up">
+        Moose is open source, free, and actively developed. Join us.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-animate="fade-up">
+        <a href="https://github.com/moosefinch/moose" target="_blank" rel="noopener noreferrer" class="btn-glossy px-8 py-4 text-background font-semibold rounded-xl flex items-center gap-2">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          View on GitHub
+        </a>
+        <a href="https://github.com/moosefinch/moose/issues" target="_blank" rel="noopener noreferrer" class="btn-outline px-8 py-4 text-cream rounded-xl font-medium">Report Issues</a>
+      </div>
+      <p class="text-foreground-muted/60 text-sm mt-8">
+        Requires Python 3.11+, Node 18+, and an LLM backend. Currently in active development &mdash; contributions welcome.
+      </p>
+    </div>
+  </section>
+
+</BaseLayout>

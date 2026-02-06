@@ -1,0 +1,27 @@
+---
+/**
+ * ContentPanel — Reusable wrapper for each content section in the scroll journey.
+ * Provides scroll-reveal configuration and consistent panel styling.
+ */
+interface Props {
+  id: string;
+  variant?: 'hero' | 'section' | 'pinned';
+  class?: string;
+}
+
+const { id, variant = 'section', class: className = '' } = Astro.props;
+
+const variantClass = {
+  hero: 'content-panel--hero',
+  section: 'content-panel--section',
+  pinned: 'content-panel--pinned',
+}[variant];
+---
+
+<section
+  id={id}
+  class:list={['content-panel', variantClass, className]}
+  data-panel={id}
+>
+  <slot />
+</section>

@@ -1,0 +1,74 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  tags: string[];
+  stats?: { label: string; value: string }[];
+}
+
+const { title, description, date, tags, stats = [] } = Astro.props;
+---
+
+<BaseLayout title={`${title} | FAESR`} description={description}>
+  <section class="pt-32 pb-12 relative hero-bg">
+    <div class="max-w-4xl mx-auto px-6">
+      <nav class="text-sm text-foreground-muted mb-8" data-animate="fade-up">
+        <a href="/" class="hover:text-gold transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/research" class="hover:text-gold transition-colors">Research</a>
+        <span class="mx-2">/</span>
+        <span class="text-cream">{title.split(':')[0]}</span>
+      </nav>
+
+      <p class="text-gold text-sm font-medium uppercase tracking-wider mb-4" data-animate="fade-up">Research Analysis</p>
+      <h1 class="text-3xl md:text-5xl font-bold text-cream mb-6 leading-tight" data-animate="char-stagger">{title}</h1>
+      <p class="text-lg text-foreground-muted leading-relaxed mb-6" data-animate="fade-up">{description}</p>
+      <p class="text-foreground-muted text-sm mb-8" data-animate="fade-up">{date}</p>
+
+      {tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 mb-8" data-animate="fade-up">
+          {tags.map((tag) => (
+            <span class="research-tag">{tag}</span>
+          ))}
+        </div>
+      )}
+
+      {stats.length > 0 && (
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8" data-animate="stagger">
+          {stats.map((stat) => (
+            <div class="glass-card p-4 rounded-xl text-center">
+              <div class="text-2xl font-bold text-gold">{stat.value}</div>
+              <div class="text-xs text-foreground-muted mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="prose prose-invert prose-gold max-w-none
+        [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-cream [&_h2]:mt-12 [&_h2]:mb-4
+        [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-gold [&_h3]:mt-8 [&_h3]:mb-3
+        [&_p]:text-foreground-muted [&_p]:leading-relaxed [&_p]:mb-4
+        [&_strong]:text-cream [&_strong]:font-semibold
+        [&_em]:text-gold-light [&_em]:italic
+        [&_blockquote]:border-l-2 [&_blockquote]:border-gold/30 [&_blockquote]:pl-6 [&_blockquote]:my-6 [&_blockquote]:italic [&_blockquote]:text-foreground-muted
+        [&_a]:text-gold [&_a]:hover:text-cream [&_a]:transition-colors [&_a]:underline [&_a]:underline-offset-2
+        [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:text-foreground-muted [&_ul]:space-y-2
+        [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:text-foreground-muted [&_ol]:space-y-2
+        [&_table]:w-full [&_table]:my-6
+        [&_th]:text-left [&_th]:text-gold [&_th]:text-sm [&_th]:font-semibold [&_th]:pb-2 [&_th]:border-b [&_th]:border-white/10
+        [&_td]:py-2 [&_td]:text-foreground-muted [&_td]:text-sm [&_td]:border-b [&_td]:border-white/5
+        [&_code]:text-gold [&_code]:bg-white/5 [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm
+        [&_pre]:bg-white/3 [&_pre]:rounded-xl [&_pre]:p-4 [&_pre]:overflow-x-auto [&_pre]:my-6
+      " data-animate="fade-up">
+        <slot />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
